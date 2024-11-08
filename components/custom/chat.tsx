@@ -3,6 +3,7 @@
 import { Attachment, Message } from 'ai';
 import { useChat } from 'ai/react';
 import { useState } from 'react';
+import { toast } from 'sonner';
 
 import { ChatHeader } from '@/components/custom/chat-header';
 import { Message as PreviewMessage } from '@/components/custom/message';
@@ -27,6 +28,11 @@ export function Chat({
       initialMessages,
       onFinish: () => {
         window.history.replaceState({}, '', `/chat/${id}`);
+      },
+      onResponse: (resp) => {
+        if (resp.status !== 200){
+          console.log('error')
+        }
       },
     });
 

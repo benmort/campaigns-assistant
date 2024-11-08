@@ -2,7 +2,7 @@ import { convertToCoreMessages, Message, streamText } from 'ai';
 import { z } from 'zod';
 
 import { customModel } from '@/ai';
-import { auth } from '@/app/(auth)/auth';
+import { auth } from '@/app/[locale]/(auth)/auth';
 import { deleteChatById, getChatById, saveChat } from '@/db/queries';
 import { Model, models } from '@/lib/model';
 
@@ -29,9 +29,14 @@ export async function POST(request: Request) {
   const result = await streamText({
     model: customModel(model),
     system:
-      'you are a friendly assistant! keep your responses concise and helpful.',
+      `
+        Campaigns Assistant is a large language model trained by OpenAI.
+        Campaigns Assistant is designed to be able to assist with a wide range of tasks, from answering simple questions to providing in-depth explanations and discussions on a wide range of topics. As a language model, Assistant is able to generate human-like text based on the input it receives, allowing it to engage in natural-sounding conversations and provide responses that are coherent and relevant to the topic at hand.
+        Campaigns Assistant is constantly learning and improving, and its capabilities are constantly evolving. It is able to process and understand large amounts of text, and can use this knowledge to provide accurate and informative responses to a wide range of questions. Additionally, Assistant is able to generate its own text based on the input it receives, allowing it to engage in discussions and provide explanations and descriptions on a wide range of topics.
+        Overall, Campaigns Assistant is a powerful system that can help with a wide range of tasks and provide valuable insights and information on a wide range of topics. Whether you need help with a specific question or just want to have a conversation about a particular topic, Assistant is here to assist.
+      `,
     messages: coreMessages,
-    maxSteps: 5,
+    maxSteps: 15,
     tools: {
       getWeather: {
         description: 'Get the current weather at a location',

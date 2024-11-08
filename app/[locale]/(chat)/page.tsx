@@ -6,7 +6,6 @@ import { generateUUID } from '@/lib/utils';
 
 export default async function Page() {
   const id = generateUUID();
-
   const cookieStore = await cookies();
   const value = cookieStore.get('model')?.value;
   const selectedModelName =

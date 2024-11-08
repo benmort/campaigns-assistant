@@ -2,7 +2,7 @@ import { CoreMessage } from 'ai';
 import { cookies } from 'next/headers';
 import { notFound } from 'next/navigation';
 
-import { auth } from '@/app/(auth)/auth';
+import { auth } from '@/app/[locale]/(auth)/auth';
 import { Chat as PreviewChat } from '@/components/custom/chat';
 import { getChatById } from '@/db/queries';
 import { Chat } from '@/db/schema';
