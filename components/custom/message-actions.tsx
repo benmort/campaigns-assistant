@@ -1,4 +1,5 @@
 import { Message } from 'ai';
+import { useTranslations } from 'next-intl';
 import { toast } from 'sonner';
 import { useSWRConfig } from 'swr';
 import { useCopyToClipboard } from 'usehooks-ts';
@@ -28,6 +29,7 @@ export function MessageActions({
 }) {
   const { mutate } = useSWRConfig();
   const [_, copyToClipboard] = useCopyToClipboard();
+  const content = useTranslations('content')
 
   if (isLoading) return null;
   if (message.role === 'user') return null;
@@ -44,13 +46,13 @@ export function MessageActions({
               variant="outline"
               onClick={async () => {
                 await copyToClipboard(message.content as string);
-                toast.success('Copied to clipboard!');
+                toast.success(content('copied_clipboard'));
               }}
             >
               <CopyIcon />
             </Button>
           </TooltipTrigger>
-          <TooltipContent>Copy</TooltipContent>
+          <TooltipContent>{ content('copy') }</TooltipContent>
         </Tooltip>
 
         <Tooltip>
@@ -72,7 +74,7 @@ export function MessageActions({
                 });
 
                 toast.promise(upvote, {
-                  loading: 'Upvoting Response...',
+                  loading: `${ content('upvoting_resp') }...`,
                   success: () => {
                     mutate<Array<Vote>>(
                       `/api/vote?chatId=${chatId}`,
@@ -95,16 +97,16 @@ export function MessageActions({
                       { revalidate: false }
                     );
 
-                    return 'Upvoted Response!';
+                    return `${ content('upvoted_resp') }!`;
                   },
-                  error: 'Failed to upvote response.',
+                  error: `${ content('upvote_resp_failed') }.`,
                 });
               }}
             >
               <ThumbUpIcon />
             </Button>
           </TooltipTrigger>
-          <TooltipContent>Upvote Response</TooltipContent>
+          <TooltipContent>{ content('upvote_resp') }</TooltipContent>
         </Tooltip>
 
         <Tooltip>
@@ -126,7 +128,7 @@ export function MessageActions({
                 });
 
                 toast.promise(downvote, {
-                  loading: 'Downvoting Response...',
+                  loading: `${ content('downvoting_resp') }...`,
                   success: () => {
                     mutate<Array<Vote>>(
                       `/api/vote?chatId=${chatId}`,
@@ -149,16 +151,16 @@ export function MessageActions({
                       { revalidate: false }
                     );
 
-                    return 'Downvoted Response!';
+                    return `${ content('downvoted_resp') }!`;
                   },
-                  error: 'Failed to downvote response.',
+                  error: `${ content('downvote_resp_failed') }.`,
                 });
               }}
             >
               <ThumbDownIcon />
             </Button>
           </TooltipTrigger>
-          <TooltipContent>Downvote Response</TooltipContent>
+          <TooltipContent>{ content('downvote_resp') }</TooltipContent>
         </Tooltip>
       </div>
     </TooltipProvider>

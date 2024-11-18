@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "language": "Nederlands"
+  },
+  "globals": {
+    "site_title": "Campagne Assistent"
+  },
+  "locales": {
+    "af": "Afrikaans",
+    "de": "Deutsch",
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "ga": "Gaeilge",
+    "hi": "हिन्दी",
+    "it": "Italiano",
+    "nl": "Nederlands",
+    "pl": "Polski",
+    "pt": "Português",
+    "zu": "isiZulu"
+  },
+  "content": {
+    "chat": "Chat",
+    "sign_up": "Aanmelden",
+    "log_in": "Inloggen",
+    "log_out": "Uitloggen",
+    "profile": "Profiel",
+    "register": "Registreren",
+    "toggle": "Omschakelen",
+    "toggle_sidebar": "Zijbalk omwisselen",
+    "light": "Licht",
+    "dark": "Donker",
+    "mode": "Modus",
+    "login_account": "Gebruik je e-mailadres en wachtwoord om in te loggen",
+    "create_account": "Maak een account met je e-mailadres en wachtwoord",
+    "new_chat": "Nieuwe Chat",
+    "new_chat_hero": "Een AI-chatbot ontworpen om progressieve NFP's te ondersteunen",
+    "no_chat": "Geen chats gevonden",
+    "history": "Geschiedenis",
+    "switch_language": "Taal",
+    "already_have_account": "Heb je al een account?",
+    "dont_have_account": "Heb je nog geen account?",
+    "instead": "in plaats daarvan",
+    "account_exists_notice": "Account bestaat al",
+    "acount_create_failed_notice": "Account maken mislukt",
+    "failed_validation_notice": "Validatie van je inzending is mislukt!",
+    "account_created_notice": "Account succesvol aangemaakt",
+    "invalid_credentials": "Ongeldige inloggegevens!",
+    "overview_notice": "Dit is een open source chatbot..",
+    "send_message": "Stuur een bericht...",
+    "please_wait": "Wacht tot het model zijn antwoord voltooit!",
+    "splash_overview_message": "Log in om te beginnen!",
+    "sidebar_explainer": "Je gesprekken verschijnen hier zodra je begint te chatten!",
+    "delete": "Verwijderen",
+    "deleting_chat": "Chat verwijderen...",
+    "deleted_chat_successfully": "Chat succesvol verwijderd",
+    "failed_chat_deletion": "Verwijderen van chat mislukt",
+    "login_to_save_chats": "Log in om eerdere chats op te slaan en te bekijken!",
+    "today": "Vandaag",
+    "yesterday": "Gisteren",
+    "last_7_days": "Afgelopen 7 dagen",
+    "last_30_days": "Afgelopen 30 dagen",
+    "older": "Ouder",
+    "conversation_will_appear": "Je gesprekken verschijnen hier zodra je begint te chatten!",
+    "cannot_undo": "Deze actie kan niet ongedaan worden gemaakt. Dit zal je chat permanent verwijderen en van onze servers verwijderen.",
+    "continue": "Doorgaan",
+    "sure": "Weet je het zeker?",
+    "thinking": "Denken",
+    "view_changes": "Wijzigingen bekijken",
+    "copy": "Kopiëren",
+    "copy_clipboard": "Kopiëren naar klembord",
+    "copied_clipboard": "Naar klembord gekopieerd!",
+    "view_previous": "Vorige versie bekijken",
+    "view_next": "Volgende versie bekijken",
+    "upvote": "Stem voor",
+    "upvote_resp": "Stem voor antwoord",
+    "upvoting_resp": "Stemmen voor antwoord",
+    "upvoted_resp": "Gestemd voor antwoord",
+    "upvote_resp_failed": "Stemmen voor antwoord mislukt",
+    "downvote": "Stem tegen",
+    "downvote_resp": "Stem tegen antwoord",
+    "downvoting_resp": "Stemmen tegen antwoord",
+    "downvoted_resp": "Gestemd tegen antwoord",
+    "downvote_resp_failed": "Stemmen tegen antwoord mislukt",
+    "back": "Terug",
+    "admin": {
+      "admin": "Beheerder",
+      "admin_explanation": "Beheer systeem- en winkelinstellingen via de onderstaande opties",
+      "store": "Opslag",
+      "store_explainer": "Beheer uw opgeslagen documenten",
+      "system": "Systeem",
+      "system_explanation": "Systeeminstellingen en configuraties",
+      "loading_documents": "Documenten laden",
+      "no_documents": "Geen documenten gevonden in opslag",
+      "id": "ID",
+      "file": "Bestand",
+      "content_type": "Inhoudstype"
+    }
+  },
+  "404": {
+    "page_title": "Pagina Niet Gevonden",
+    "page_description": "Sorry, de pagina die je zoekt bestaat niet.",
+    "home_link": "Ga terug naar home"
+  },
+  "suggested_prompts": {
+    "strategic_campaign": {
+      "title": "Help me een strategie van 3 maanden te ontwerpen om te pleiten voor [beleid of zaak]",
+      "label": "Wat zijn de belangrijkste mijlpalen, doelgroepen en platforms die aansluiten bij dit onderwerp?",
+      "action": "Help me een strategie van 3 maanden te ontwerpen om te pleiten voor [beleid of zaak]. Wat zijn de belangrijkste mijlpalen, doelgroepen en platforms die aansluiten bij dit onderwerp?"
+    },
+    "social_toolkit": {
+      "title": "Ontwikkel een toolkit voor supporters om [campagne] online te versterken.",
+      "label": "Moeten we vooraf geschreven berichten, infographics of videotemplates toevoegen?",
+      "action": "Ontwikkel een toolkit voor supporters om [campagne] online te versterken. Moeten we vooraf geschreven berichten, infographics of videotemplates toevoegen?"
+    },
+    "volunteer_mobilisation": {
+      "title": "Schrijf een belscript om vrijwilligers te werven voor [evenement].",
+      "label": "Moeten we de persoonlijke impact, urgentie of betrokkenheid van de gemeenschap benadrukken?",
+      "action": "Schrijf een belscript om vrijwilligers te werven voor [evenement]. Moeten we de persoonlijke impact, urgentie of betrokkenheid van de gemeenschap benadrukken?"
+    },
+    "standard_campaign": {
+      "title": "Ontwikkel een toolkit voor supporters om [campagne] online te versterken.",
+      "label": "Moeten we vooraf geschreven berichten, infographics of videotemplates toevoegen?",
+      "action": "Ontwikkel een toolkit voor supporters om [campagne] online te versterken. Moeten we vooraf geschreven berichten, infographics of videotemplates toevoegen?"
+    }
+  },
+  "ai_content": {
+    "gpt-4o-mini": {
+      "label": "GPT 4o mini",
+      "description": "Klein model voor snelle, lichte taken"
+    },
+    "gpt-4o": {
+      "label": "GPT 4o",
+      "description": "Voor complexe, meerstaps taken"
+    },
+    "gpt-4o-blocks": {
+      "label": "GPT 4o met Blokken",
+      "description": "Samenwerken aan schrijven"
+    }
+  },
+  "ai_context_indicators": {
+    "dependentKeywords": ["dit", "dat", "het", "zoals vermeld", "eerder", "doorgaan", "verder"],
+    "unresolvedReferences": ["dit", "dat", "deze", "die", "het"],
+    "questionWords": ["wat", "waarom", "hoe", "wanneer", "waar"],
+    "dependentPunctuation": ["...", "--", "(", ")"],
+    "temporalKeywords": ["later", "gisteren", "binnenkort", "morgen", "eerder"]
+  }
+}

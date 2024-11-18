@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "language": "Afrikaans"
+  },
+  "globals": {
+    "site_title": "Veldtog Assistent"
+  },
+  "locales": {
+    "af": "Afrikaans",
+    "de": "Deutsch",
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "ga": "Gaeilge",
+    "hi": "हिन्दी",
+    "it": "Italiano",
+    "nl": "Nederlands",
+    "pl": "Polski",
+    "pt": "Português",
+    "zu": "isiZulu"
+  },
+  "content": {
+    "chat": "Gesels",
+    "sign_up": "Teken Aan",
+    "log_in": "Meld Aan",
+    "log_out": "Teken Uit",
+    "profile": "Profiel",
+    "register": "Registreer",
+    "toggle": "Skakel",
+    "toggle_sidebar": "Skakel Kantebalk",
+    "light": "Lig",
+    "dark": "Donker",
+    "mode": "Modus",
+    "login_account": "Gebruik jou e-pos en wagwoord om aan te meld",
+    "create_account": "Skep 'n rekening met jou e-pos en wagwoord",
+    "new_chat": "Nuwe Geselsie",
+    "new_chat_hero": "'n KI Chatbot ontwerp om progressiewe NVP's te help",
+    "no_chat": "Geen geselsies gevind nie",
+    "history": "Geskiedenis",
+    "switch_language": "Taal",
+    "already_have_account": "Het jy reeds 'n rekening?",
+    "dont_have_account": "Het jy nie 'n rekening nie?",
+    "instead": "in plaas daarvan",
+    "account_exists_notice": "Rekening bestaan reeds",
+    "acount_create_failed_notice": "Rekening skep het misluk",
+    "failed_validation_notice": "Validering van jou inskrywing het misluk!",
+    "account_created_notice": "Rekening suksesvol geskep",
+    "invalid_credentials": "Ongeldige geloofsbriewe!",
+    "overview_notice": "Hierdie is 'n oopbron Chatbot..",
+    "send_message": "Stuur 'n boodskap...",
+    "please_wait": "Wag asseblief totdat die model sy antwoord voltooi!",
+    "splash_overview_message": "Meld aan om te begin!",
+    "sidebar_explainer": "Jou geselsies sal hier verskyn sodra jy begin gesels!",
+    "delete": "Verwyder",
+    "deleting_chat": "Verwyder Geselsie...",
+    "deleted_chat_successfully": "Geselsie suksesvol verwyder",
+    "failed_chat_deletion": "Kon nie geselsie verwyder nie",
+    "login_to_save_chats": "Meld aan om vorige geselsies te stoor en te hersien!",
+    "today": "Vandag",
+    "yesterday": "Gister",
+    "last_7_days": "Laaste 7 dae",
+    "last_30_days": "Laaste 30 dae",
+    "older": "Ouer",
+    "conversation_will_appear": "Jou geselsies sal hier verskyn sodra jy begin gesels!",
+    "cannot_undo": "Hierdie aksie kan nie ongedaan gemaak word nie. Dit sal jou geselsie permanent verwyder en van ons bedieners verwyder.",
+    "continue": "Gaan voort",
+    "sure": "Is jy seker?",
+    "thinking": "Dink",
+    "view_changes": "Sien veranderinge",
+    "copy": "Kopieer",
+    "copy_clipboard": "Kopieer na klembord",
+    "copied_clipboard": "Kopieer na klembord!",
+    "view_previous": "Sien vorige weergawe",
+    "view_next": "Sien volgende weergawe",
+    "upvote": "Stem vir",
+    "upvote_resp": "Stem vir antwoord",
+    "upvoting_resp": "Stem vir antwoord",
+    "upvoted_resp": "Gestem vir antwoord",
+    "upvote_resp_failed": "Stem vir antwoord het misluk",
+    "downvote": "Stem teen",
+    "downvote_resp": "Stem teen antwoord",
+    "downvoting_resp": "Stem teen antwoord",
+    "downvoted_resp": "Gestem teen antwoord",
+    "downvote_resp_failed": "Stem teen antwoord het misluk",
+    "back": "Terug",
+    "admin": {
+      "admin": "Admin",
+      "admin_explanation": "Bestuur stelsel- en winkelinstellings vanaf die onderstaande opsies",
+      "store": "Winkel",
+      "store_explainer": "Bestuur jou gestoorde dokumente",
+      "system": "Stelsel",
+      "system_explanation": "Stelselinstellings en konfigurasies",
+      "loading_documents": "Laai dokumente",
+      "no_documents": "Geen dokumente in winkel gevind nie",
+      "id": "ID",
+      "file": "Lêer",
+      "content_type": "Inhoudtipe"
+    }
+  },
+  "404": {
+    "page_title": "Bladsy Nie Gevind Nie",
+    "page_description": "Jammer, die bladsy waarna jy soek bestaan nie.",
+    "home_link": "Gaan terug huis toe"
+  },
+  "suggested_prompts": {
+    "strategic_campaign": {
+      "title": "Help my om 'n 3-maande strategie te ontwerp om [beleid of saak] te bevorder",
+      "label": "Wat is die sleutel mylpale, teiken gehore, en platforms wat by hierdie kwessie pas?",
+      "action": "Help my om 'n 3-maande strategie te ontwerp om [beleid of saak] te bevorder. Wat is die sleutel mylpale, teiken gehore, en platforms wat by hierdie kwessie pas?"
+    },
+    "social_toolkit": {
+      "title": "Ontwikkel 'n hulpmiddelstel vir ondersteuners om [veldtog] aanlyn te versterk.",
+      "label": "Moet ons vooraf geskryfde poste, infografika of video sjablone insluit?",
+      "action": "Ontwikkel 'n hulpmiddelstel vir ondersteuners om [veldtog] aanlyn te versterk. Moet ons vooraf geskryfde poste, infografika of video sjablone insluit?"
+    },
+    "volunteer_mobilisation": {
+      "title": "Skryf 'n oproepbankskrip om vrywilligers vir [geleentheid] te werf.",
+      "label": "Moet ons die persoonlike impak, dringendheid, of gemeenskapsbetrokkenheid beklemtoon?",
+      "action": "Skryf 'n oproepbankskrip om vrywilligers vir [geleentheid] te werf. Moet ons die persoonlike impak, dringendheid, of gemeenskapsbetrokkenheid beklemtoon?"
+    },
+    "standard_campaign": {
+      "title": "Ontwikkel 'n hulpmiddelstel vir ondersteuners om [veldtog] aanlyn te versterk.",
+      "label": "Moet ons vooraf geskryfde poste, infografika of video sjablone insluit?",
+      "action": "Ontwikkel 'n hulpmiddelstel vir ondersteuners om [veldtog] aanlyn te versterk. Moet ons vooraf geskryfde poste, infografika of video sjablone insluit?"
+    }
+  },
+  "ai_content": {
+    "gpt-4o-mini": {
+      "label": "GPT 4o mini",
+      "description": "Klein model vir vinnige, ligte take"
+    },
+    "gpt-4o": {
+      "label": "GPT 4o",
+      "description": "Vir komplekse, multi-stap take"
+    },
+    "gpt-4o-blocks": {
+      "label": "GPT 4o met Blokke",
+      "description": "Saamwerk in skryf"
+    }
+  },
+  "ai_context_indicators": {
+    "dependentKeywords": ["dit", "dat", "dit", "soos genoem", "vroeër", "voortgesit", "verder"],
+    "unresolvedReferences": ["dit", "dat", "hierdie", "daardie", "dit"],
+    "questionWords": ["wat", "hoekom", "hoe", "wanneer", "waar"],
+    "dependentPunctuation": ["...", "--", "(", ")"],
+    "temporalKeywords": ["later", "gister", "binnekort", "môre", "vroeër"]
+  }
+}

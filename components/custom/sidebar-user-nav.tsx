@@ -1,8 +1,10 @@
 'use client';
 import { ChevronUp } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { type User } from 'next-auth';
 import { signOut } from 'next-auth/react';
+import { useTranslations } from 'next-intl';
 import { useTheme } from 'next-themes';
 
 import {
@@ -20,6 +22,7 @@ import {
 
 export function SidebarUserNav({ user }: { user: User }) {
   const { setTheme, theme } = useTheme();
+  const content = useTranslations('content')
 
   return (
     <SidebarMenu>
@@ -42,11 +45,17 @@ export function SidebarUserNav({ user }: { user: User }) {
             side="top"
             className="w-[--radix-popper-anchor-width]"
           >
-            <DropdownMenuItem
-              className="cursor-pointer"
-              onSelect={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-            >
-              {`Toggle ${theme === 'light' ? 'dark' : 'light'} mode`}
+            {/*
+              <DropdownMenuItem
+                className="cursor-pointer"
+                onSelect={() => setTheme(theme === 'dark' ? content('light') : content('dark'))}
+              >
+                {`${content('toggle')} ${theme === 'light' ? content('dark') : content('light')} ${content('mode')}`}
+              </DropdownMenuItem>
+              
+            */}
+            <DropdownMenuItem asChild>
+              <Link href="/admin">Admin</Link>
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem asChild>
@@ -58,7 +67,7 @@ export function SidebarUserNav({ user }: { user: User }) {
                   });
                 }}
               >
-                Sign out
+                { content('log_out') }
               </button>
             </DropdownMenuItem>
           </DropdownMenuContent>

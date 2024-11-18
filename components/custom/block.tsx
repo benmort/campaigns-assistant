@@ -2,6 +2,7 @@ import { Attachment, ChatRequestOptions, CreateMessage, Message } from 'ai';
 import cx from 'classnames';
 import { formatDistance } from 'date-fns';
 import { AnimatePresence, motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import {
   Dispatch,
   SetStateAction,
@@ -244,6 +245,7 @@ export function Block({
   const isMobile = windowWidth ? windowWidth < 768 : false;
 
   const [_, copyToClipboard] = useCopyToClipboard();
+  const content = useTranslations('content')
 
   return (
     <motion.div
@@ -443,14 +445,14 @@ export function Block({
                   className="p-2 h-fit dark:hover:bg-zinc-700"
                   onClick={() => {
                     copyToClipboard(block.content);
-                    toast.success('Copied to clipboard!');
+                    toast.success(content('copied_clipboard'));
                   }}
                   disabled={block.status === 'streaming'}
                 >
                   <CopyIcon size={18} />
                 </Button>
               </TooltipTrigger>
-              <TooltipContent>Copy to clipboard</TooltipContent>
+              <TooltipContent>{ content('copy_clipboard') }</TooltipContent>
             </Tooltip>
             <Tooltip>
               <TooltipTrigger asChild>
@@ -467,7 +469,7 @@ export function Block({
                   <UndoIcon size={18} />
                 </Button>
               </TooltipTrigger>
-              <TooltipContent>View Previous version</TooltipContent>
+              <TooltipContent>{ content('view_previous') }</TooltipContent>
             </Tooltip>
             <Tooltip>
               <TooltipTrigger asChild>
@@ -482,7 +484,7 @@ export function Block({
                   <RedoIcon size={18} />
                 </Button>
               </TooltipTrigger>
-              <TooltipContent>View Next version</TooltipContent>
+              <TooltipContent>{ content('view_next') }</TooltipContent>
             </Tooltip>
             <Tooltip>
               <TooltipTrigger asChild>
@@ -504,7 +506,7 @@ export function Block({
                   <DeltaIcon size={18} />
                 </Button>
               </TooltipTrigger>
-              <TooltipContent>View changes</TooltipContent>
+              <TooltipContent>{ content('view_changes') }</TooltipContent>
             </Tooltip>
           </div>
         </div>

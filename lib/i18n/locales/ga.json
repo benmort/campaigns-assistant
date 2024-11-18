@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "language": "Gaeilge"
+  },
+  "globals": {
+    "site_title": "Cúntóir Feachtais"
+  },
+  "locales": {
+    "af": "Afrikaans",
+    "de": "Deutsch",
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "ga": "Gaeilge",
+    "hi": "हिन्दी",
+    "it": "Italiano",
+    "nl": "Nederlands",
+    "pl": "Polski",
+    "pt": "Português",
+    "zu": "isiZulu"
+  },
+  "content": {
+    "chat": "Comhrá",
+    "sign_up": "Cláraigh",
+    "log_in": "Logáil Isteach",
+    "log_out": "Logáil Amach",
+    "profile": "Próifíl",
+    "register": "Cláraigh",
+    "toggle": "Athraigh",
+    "toggle_sidebar": "Athraigh Barra Taoibh",
+    "light": "Solas",
+    "dark": "Dorcha",
+    "mode": "Mód",
+    "login_account": "Úsáid do r-phost agus do phasfhocal chun logáil isteach",
+    "create_account": "Cruthaigh cuntas le do r-phost agus pasfhocal",
+    "new_chat": "Comhrá Nua",
+    "new_chat_hero": "Chatbot AI deartha chun cabhrú le NFP forásacha",
+    "no_chat": "Níl comhráite aimsithe",
+    "history": "Stair",
+    "switch_language": "Teanga",
+    "already_have_account": "An bhfuil cuntas agat cheana?",
+    "dont_have_account": "Níl cuntas agat?",
+    "instead": "ina ionad",
+    "account_exists_notice": "Tá cuntas ann cheana",
+    "acount_create_failed_notice": "Theip ar chruthú an chuntais",
+    "failed_validation_notice": "Theip ar bhailíochtú do chur isteach!",
+    "account_created_notice": "Cruthaíodh an cuntas go rathúil",
+    "invalid_credentials": "Creidiúnachtaí neamhbhailí!",
+    "overview_notice": "Is chatbot foinse oscailte é seo..",
+    "send_message": "Seol teachtaireacht...",
+    "please_wait": "Fan le do thoil go gcríochnóidh an tsamhail a freagra!",
+    "splash_overview_message": "Logáil isteach chun tosú!",
+    "sidebar_explainer": "Beidh do chomhráite le feiceáil anseo nuair a thosóidh tú ag comhrá!",
+    "delete": "Scrios",
+    "deleting_chat": "Ag scriosadh comhrá...",
+    "deleted_chat_successfully": "Scriosadh comhrá go rathúil",
+    "failed_chat_deletion": "Theip ar scriosadh comhrá",
+    "login_to_save_chats": "Logáil isteach chun comhráite roimhe a shábháil agus a athbhreithniú!",
+    "today": "Inniu",
+    "yesterday": "Inné",
+    "last_7_days": "Na 7 lá deireanacha",
+    "last_30_days": "Na 30 lá deireanacha",
+    "older": "Níos sine",
+    "conversation_will_appear": "Beidh do chomhráite le feiceáil anseo nuair a thosóidh tú ag comhrá!",
+    "cannot_undo": "Ní féidir an gníomh seo a chealú. Scriosfaidh sé seo do chomhrá go buan agus bainfidh sé é ó ár bhfreastalaithe.",
+    "continue": "Lean ar aghaidh",
+    "sure": "An bhfuil tú cinnte go hiomlán?",
+    "thinking": "Ag smaoineamh",
+    "view_changes": "Féach ar na hathruithe",
+    "copy": "Cóip",
+    "copy_clipboard": "Cóip chuig an gclib",
+    "copied_clipboard": "Cóipeadh chuig an gclib!",
+    "view_previous": "Féach ar an leagan roimhe seo",
+    "view_next": "Féach ar an leagan seo chugainn",
+    "upvote": "Vótáil ar son",
+    "upvote_resp": "Vótáil ar son freagra",
+    "upvoting_resp": "Ag vótáil ar son freagra",
+    "upvoted_resp": "Vótáilte ar son freagra",
+    "upvote_resp_failed": "Theip ar vótáil ar son freagra",
+    "downvote": "Vótáil in aghaidh",
+    "downvote_resp": "Vótáil in aghaidh freagra",
+    "downvoting_resp": "Ag vótáil in aghaidh freagra",
+    "downvoted_resp": "Vótáilte in aghaidh freagra",
+    "downvote_resp_failed": "Theip ar vótáil in aghaidh freagra",
+    "back": "Ar ais",
+    "admin": {
+      "admin": "Riarthóir",
+      "admin_explanation": "Bainistigh socruithe an chórais agus an stór ón na roghanna thíos",
+      "store": "Siopa",
+      "store_explainer": "Bainistigh do dhoiciméid stóráilte",
+      "system": "Córas",
+      "system_explanation": "Socruithe agus cumraíochtaí an chórais",
+      "loading_documents": "Ag lódáil doiciméid",
+      "no_documents": "Níor aimsíodh aon doiciméid sa stór",
+      "id": "ID",
+      "file": "Comhad",
+      "content_type": "Cineál Ábhair"
+    }
+  },
+  "404": {
+    "page_title": "Leathanach Gan Aimsiú",
+    "page_description": "Tá brón orainn, níl an leathanach atá á lorg agat ann.",
+    "home_link": "Ar ais go baile"
+  },
+  "suggested_prompts": {
+    "strategic_campaign": {
+      "title": "Cabhraigh liom straitéis 3 mhí a dhearadh chun tacú le [beartas nó cúis]",
+      "label": "Cad iad na príomh-mhíreanna, lucht féachana sprice, agus ardáin a oireann don ábhar seo?",
+      "action": "Cabhraigh liom straitéis 3 mhí a dhearadh chun tacú le [beartas nó cúis]. Cad iad na príomh-mhíreanna, lucht féachana sprice, agus ardáin a oireann don ábhar seo?"
+    },
+    "social_toolkit": {
+      "title": "Cruthaigh uirlisí chun tacadóirí a spreagadh chun [feachtas] a mhéadú ar líne.",
+      "label": "Ar cheart dúinn postálacha réamhscríofa, infografaic, nó teimpléid físe a áireamh?",
+      "action": "Cruthaigh uirlisí chun tacadóirí a spreagadh chun [feachtas] a mhéadú ar líne. Ar cheart dúinn postálacha réamhscríofa, infografaic, nó teimpléid físe a áireamh?"
+    },
+    "volunteer_mobilisation": {
+      "title": "Scríobh script bancála teileafóin chun oibrithe deonacha a earcú don [ócáid].",
+      "label": "Ar cheart dúinn béim a chur ar an tionchar pearsanta, ar an phráinn, nó ar rannpháirtíocht an phobail?",
+      "action": "Scríobh script bancála teileafóin chun oibrithe deonacha a earcú don [ócáid]. Ar cheart dúinn béim a chur ar an tionchar pearsanta, ar an phráinn, nó ar rannpháirtíocht an phobail?"
+    },
+    "standard_campaign": {
+      "title": "Cruthaigh uirlisí chun tacadóirí a spreagadh chun [feachtas] a mhéadú ar líne.",
+      "label": "Ar cheart dúinn postálacha réamhscríofa, infografaic, nó teimpléid físe a áireamh?",
+      "action": "Cruthaigh uirlisí chun tacadóirí a spreagadh chun [feachtas] a mhéadú ar líne. Ar cheart dúinn postálacha réamhscríofa, infografaic, nó teimpléid físe a áireamh?"
+    }
+  },
+  "ai_content": {
+    "gpt-4o-mini": {
+      "label": "GPT 4o mini",
+      "description": "Mionsamhail do thascanna gasta, éadroma"
+    },
+    "gpt-4o": {
+      "label": "GPT 4o",
+      "description": "Do thascanna casta, ilchéime"
+    },
+    "gpt-4o-blocks": {
+      "label": "GPT 4o le Bloic",
+      "description": "Comhoibriú i scríbhneoireacht"
+    }
+  },
+  "ai_context_indicators": {
+    "dependentKeywords": ["seo", "sin", "é", "mar a luadh", "níos luaithe", "leanúint ar aghaidh", "tuilleadh"],
+    "unresolvedReferences": ["seo", "sin", "iad seo", "siúd", "é"],
+    "questionWords": ["cad", "cén fáth", "conas", "cathain", "cá háit"],
+    "dependentPunctuation": ["...", "--", "(", ")"],
+    "temporalKeywords": ["níos déanaí", "inné", "go luath", "amárach", "níos luaithe"]
+  }
+}

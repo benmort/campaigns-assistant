@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "language": "Español"
+  },
+  "globals": {
+    "site_title": "Asistente de Campañas"
+  },
+  "locales": {
+    "af": "Afrikaans",
+    "de": "Deutsch",
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "ga": "Gaeilge",
+    "hi": "हिन्दी",
+    "it": "Italiano",
+    "nl": "Nederlands",
+    "pl": "Polski",
+    "pt": "Português",
+    "zu": "isiZulu"
+  },
+  "content": {
+    "chat": "Chat",
+    "sign_up": "Registrarse",
+    "log_in": "Iniciar sesión",
+    "log_out": "Cerrar sesión",
+    "profile": "Perfil",
+    "register": "Registrar",
+    "toggle": "Alternar",
+    "toggle_sidebar": "Alternar Barra Lateral",
+    "light": "Claro",
+    "dark": "Oscuro",
+    "mode": "Modo",
+    "login_account": "Usa tu correo electrónico y contraseña para iniciar sesión",
+    "create_account": "Crea una cuenta con tu correo electrónico y contraseña",
+    "new_chat": "Nuevo Chat",
+    "new_chat_hero": "Un Chatbot de IA diseñado para asistir a NFP progresistas",
+    "no_chat": "No se encontraron chats",
+    "history": "Historial",
+    "switch_language": "Idioma",
+    "already_have_account": "¿Ya tienes una cuenta?",
+    "dont_have_account": "¿No tienes una cuenta?",
+    "instead": "en su lugar",
+    "account_exists_notice": "La cuenta ya existe",
+    "acount_create_failed_notice": "Error al crear la cuenta",
+    "failed_validation_notice": "¡Error al validar tu envío!",
+    "account_created_notice": "Cuenta creada exitosamente",
+    "invalid_credentials": "¡Credenciales inválidas!",
+    "overview_notice": "Este es un chatbot de código abierto..",
+    "send_message": "Enviar un mensaje...",
+    "please_wait": "¡Por favor, espera a que el modelo termine su respuesta!",
+    "splash_overview_message": "¡Inicia sesión para comenzar!",
+    "sidebar_explainer": "¡Tus conversaciones aparecerán aquí una vez que empieces a chatear!",
+    "delete": "Eliminar",
+    "deleting_chat": "Eliminando Chat...",
+    "deleted_chat_successfully": "Chat eliminado exitosamente",
+    "failed_chat_deletion": "Error al eliminar el chat",
+    "login_to_save_chats": "Inicia sesión para guardar y revisar chats anteriores!",
+    "today": "Hoy",
+    "yesterday": "Ayer",
+    "last_7_days": "Últimos 7 días",
+    "last_30_days": "Últimos 30 días",
+    "older": "Más antiguo",
+    "conversation_will_appear": "Tus conversaciones aparecerán aquí una vez que empieces a chatear!",
+    "cannot_undo": "Esta acción no se puede deshacer. Esto eliminará permanentemente tu chat y lo eliminará de nuestros servidores.",
+    "continue": "Continuar",
+    "sure": "¿Estás absolutamente seguro?",
+    "thinking": "Pensando",
+    "view_changes": "Ver cambios",
+    "copy": "Copiar",
+    "copy_clipboard": "Copiar al portapapeles",
+    "copied_clipboard": "¡Copiado al portapapeles!",
+    "view_previous": "Ver versión anterior",
+    "view_next": "Ver siguiente versión",
+    "upvote": "Votar a favor",
+    "upvote_resp": "Votar a favor respuesta",
+    "upvoting_resp": "Votando a favor respuesta",
+    "upvoted_resp": "Votado a favor respuesta",
+    "upvote_resp_failed": "Error al votar a favor respuesta",
+    "downvote": "Votar en contra",
+    "downvote_resp": "Votar en contra respuesta",
+    "downvoting_resp": "Votando en contra respuesta",
+    "downvoted_resp": "Votado en contra respuesta",
+    "downvote_resp_failed": "Error al votar en contra respuesta",
+    "back": "Atrás",
+    "admin": {
+      "admin": "Administrador",
+      "admin_explanation": "Administra las configuraciones del sistema y la tienda desde las opciones a continuación",
+      "store": "Tienda",
+      "store_explainer": "Gestiona tus documentos almacenados",
+      "system": "Sistema",
+      "system_explanation": "Configuraciones y ajustes del sistema",
+      "loading_documents": "Cargando documentos",
+      "no_documents": "No se encontraron documentos en la tienda",
+      "id": "ID",
+      "file": "Archivo",
+      "content_type": "Tipo de contenido"
+    }
+  },
+  "404": {
+    "page_title": "Página No Encontrada",
+    "page_description": "Lo siento, la página que buscas no existe.",
+    "home_link": "Volver a la página principal"
+  },
+  "suggested_prompts": {
+    "strategic_campaign": {
+      "title": "Ayúdame a diseñar una estrategia de 3 meses para abogar por [política o causa]",
+      "label": "¿Cuáles son los hitos clave, públicos objetivo y plataformas que se alinean con este tema?",
+      "action": "Ayúdame a diseñar una estrategia de 3 meses para abogar por [política o causa]. ¿Cuáles son los hitos clave, públicos objetivo y plataformas que se alinean con este tema?"
+    },
+    "social_toolkit": {
+      "title": "Desarrolla un kit de herramientas para que los partidarios amplifiquen [campaña] en línea.",
+      "label": "¿Deberíamos incluir publicaciones preescritas, infografías o plantillas de video?",
+      "action": "Desarrolla un kit de herramientas para que los partidarios amplifiquen [campaña] en línea. ¿Deberíamos incluir publicaciones preescritas, infografías o plantillas de video?"
+    },
+    "volunteer_mobilisation": {
+      "title": "Escribe un guion de llamadas para reclutar voluntarios para [evento].",
+      "label": "¿Deberíamos enfatizar el impacto personal, la urgencia o la participación comunitaria?",
+      "action": "Escribe un guion de llamadas para reclutar voluntarios para [evento]. ¿Deberíamos enfatizar el impacto personal, la urgencia o la participación comunitaria?"
+    },
+    "standard_campaign": {
+      "title": "Desarrolla un kit de herramientas para que los partidarios amplifiquen [campaña] en línea.",
+      "label": "¿Deberíamos incluir publicaciones preescritas, infografías o plantillas de video?",
+      "action": "Desarrolla un kit de herramientas para que los partidarios amplifiquen [campaña] en línea. ¿Deberíamos incluir publicaciones preescritas, infografías o plantillas de video?"
+    }
+  },
+  "ai_content": {
+    "gpt-4o-mini": {
+      "label": "GPT 4o mini",
+      "description": "Modelo pequeño para tareas rápidas y ligeras"
+    },
+    "gpt-4o": {
+      "label": "GPT 4o",
+      "description": "Para tareas complejas y de múltiples pasos"
+    },
+    "gpt-4o-blocks": {
+      "label": "GPT 4o con Bloques",
+      "description": "Colaboración en escritura"
+    }
+  },
+  "ai_context_indicators": {
+    "dependentKeywords": ["esto", "eso", "ello", "como se mencionó", "anteriormente", "continuando", "más adelante"],
+    "unresolvedReferences": ["esto", "eso", "estos", "aquellos", "ello"],
+    "questionWords": ["qué", "por qué", "cómo", "cuándo", "dónde"],
+    "dependentPunctuation": ["...", "–", "(", ")"],
+    "temporalKeywords": ["más tarde", "ayer", "pronto", "mañana", "antes"]
+  }
+}

@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { startTransition, useMemo, useOptimistic, useState } from 'react';
 
 import { models } from '@/ai/models';
@@ -15,6 +16,8 @@ import { cn } from '@/lib/utils';
 
 import { CheckCirclFillIcon, ChevronDownIcon } from './icons';
 
+const DROPDOWN_DISABLED = true;
+
 export function ModelSelector({
   selectedModelId,
   className,
@@ -29,6 +32,7 @@ export function ModelSelector({
     () => models.find((model) => model.id === optimisticModelId),
     [optimisticModelId]
   );
+  const ai_content = useTranslations('ai_content')
 
   return (
     <DropdownMenu open={open} onOpenChange={setOpen}>
@@ -39,8 +43,8 @@ export function ModelSelector({
           className
         )}
       >
-        <Button variant="outline" className="md:px-2 md:h-[34px]">
-          {selectModel?.label}
+        <Button variant="outline" className="md:px-2 md:h-[34px]" disabled={DROPDOWN_DISABLED}>
+          { selectModel && ai_content(`${selectModel.id}.label`) }
           <ChevronDownIcon />
         </Button>
       </DropdownMenuTrigger>
@@ -60,10 +64,10 @@ export function ModelSelector({
             data-active={model.id === optimisticModelId}
           >
             <div className="flex flex-col gap-1 items-start">
-              {model.label}
-              {model.description && (
+              { ai_content(`${model.id}.label`) }
+              {model && (
                 <div className="text-xs text-muted-foreground">
-                  {model.description}
+                  { ai_content(`${model.id}.description`) }
                 </div>
               )}
             </div>

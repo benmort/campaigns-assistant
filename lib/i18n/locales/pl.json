@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "language": "Polski"
+  },
+  "globals": {
+    "site_title": "Asystent Kampanii"
+  },
+  "locales": {
+    "af": "Afrikaans",
+    "de": "Deutsch",
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "ga": "Gaeilge",
+    "hi": "हिन्दी",
+    "it": "Italiano",
+    "nl": "Nederlands",
+    "pl": "Polski",
+    "pt": "Português",
+    "zu": "isiZulu"
+  },
+  "content": {
+    "chat": "Czat",
+    "sign_up": "Zarejestruj się",
+    "log_in": "Zaloguj się",
+    "log_out": "Wyloguj się",
+    "profile": "Profil",
+    "register": "Zarejestruj",
+    "toggle": "Przełącz",
+    "toggle_sidebar": "Przełącz Pasek Boczne",
+    "light": "Jasny",
+    "dark": "Ciemny",
+    "mode": "Tryb",
+    "login_account": "Użyj swojego adresu e-mail i hasła, aby się zalogować",
+    "create_account": "Utwórz konto przy użyciu adresu e-mail i hasła",
+    "new_chat": "Nowy Czat",
+    "new_chat_hero": "Chatbot AI stworzony, aby wspierać progresywne NFP",
+    "no_chat": "Nie znaleziono czatów",
+    "history": "Historia",
+    "switch_language": "Język",
+    "already_have_account": "Masz już konto?",
+    "dont_have_account": "Nie masz konta?",
+    "instead": "zamiast",
+    "account_exists_notice": "Konto już istnieje",
+    "acount_create_failed_notice": "Nie udało się utworzyć konta",
+    "failed_validation_notice": "Nie udało się zweryfikować twojego zgłoszenia!",
+    "account_created_notice": "Konto zostało pomyślnie utworzone",
+    "invalid_credentials": "Nieprawidłowe dane uwierzytelniające!",
+    "overview_notice": "To jest chatbot open source..",
+    "send_message": "Wyślij wiadomość...",
+    "please_wait": "Proszę czekać, aż model zakończy odpowiedź!",
+    "splash_overview_message": "Zaloguj się, aby rozpocząć!",
+    "sidebar_explainer": "Twoje rozmowy pojawią się tutaj, gdy zaczniesz czatować!",
+    "delete": "Usuń",
+    "deleting_chat": "Usuwanie czatu...",
+    "deleted_chat_successfully": "Czat został pomyślnie usunięty",
+    "failed_chat_deletion": "Nie udało się usunąć czatu",
+    "login_to_save_chats": "Zaloguj się, aby zapisać i przeglądać poprzednie czaty!",
+    "today": "Dziś",
+    "yesterday": "Wczoraj",
+    "last_7_days": "Ostatnie 7 dni",
+    "last_30_days": "Ostatnie 30 dni",
+    "older": "Starsze",
+    "conversation_will_appear": "Twoje rozmowy pojawią się tutaj, gdy zaczniesz czatować!",
+    "cannot_undo": "Tej akcji nie można cofnąć. To trwale usunie twoją rozmowę i usunie ją z naszych serwerów.",
+    "continue": "Kontynuuj",
+    "sure": "Czy jesteś absolutnie pewien?",
+    "thinking": "Myślenie",
+    "view_changes": "Zobacz zmiany",
+    "copy": "Kopiuj",
+    "copy_clipboard": "Kopiuj do schowka",
+    "copied_clipboard": "Skopiowano do schowka!",
+    "view_previous": "Zobacz poprzednią wersję",
+    "view_next": "Zobacz następną wersję",
+    "upvote": "Głosuj za",
+    "upvote_resp": "Głosuj za odpowiedzią",
+    "upvoting_resp": "Głosowanie za odpowiedzią",
+    "upvoted_resp": "Głosowano za odpowiedzią",
+    "upvote_resp_failed": "Głosowanie za odpowiedzią nie powiodło się",
+    "downvote": "Głosuj przeciw",
+    "downvote_resp": "Głosuj przeciw odpowiedzi",
+    "downvoting_resp": "Głosowanie przeciw odpowiedzi",
+    "downvoted_resp": "Głosowano przeciw odpowiedzi",
+    "downvote_resp_failed": "Głosowanie przeciw odpowiedzi nie powiodło się",
+    "back": "Wstecz",
+    "admin": {
+      "admin": "Admin",
+      "admin_explanation": "Zarządzaj ustawieniami systemu i magazynu za pomocą poniższych opcji",
+      "store": "Magazyn",
+      "store_explainer": "Zarządzaj swoimi przechowywanymi dokumentami",
+      "system": "System",
+      "system_explanation": "Ustawienia i konfiguracje systemowe",
+      "loading_documents": "Ładowanie dokumentów",
+      "no_documents": "Nie znaleziono dokumentów w magazynie",
+      "id": "ID",
+      "file": "Plik",
+      "content_type": "Typ treści"
+    }
+  },
+  "404": {
+    "page_title": "Strona Nie Znaleziona",
+    "page_description": "Przepraszamy, strona, której szukasz, nie istnieje.",
+    "home_link": "Wróć do strony głównej"
+  },
+  "suggested_prompts": {
+    "strategic_campaign": {
+      "title": "Pomóż mi zaprojektować 3-miesięczną strategię na rzecz [polityki lub sprawy]",
+      "label": "Jakie są kluczowe kamienie milowe, docelowe grupy odbiorców i platformy zgodne z tym tematem?",
+      "action": "Pomóż mi zaprojektować 3-miesięczną strategię na rzecz [polityki lub sprawy]. Jakie są kluczowe kamienie milowe, docelowe grupy odbiorców i platformy zgodne z tym tematem?"
+    },
+    "social_toolkit": {
+      "title": "Opracuj zestaw narzędzi dla zwolenników do wzmocnienia [kampanii] online.",
+      "label": "Czy powinniśmy dodać wcześniej napisane posty, infografiki lub szablony wideo?",
+      "action": "Opracuj zestaw narzędzi dla zwolenników do wzmocnienia [kampanii] online. Czy powinniśmy dodać wcześniej napisane posty, infografiki lub szablony wideo?"
+    },
+    "volunteer_mobilisation": {
+      "title": "Napisz skrypt do telefonicznego pozyskiwania wolontariuszy na [wydarzenie].",
+      "label": "Czy powinniśmy podkreślić osobisty wpływ, pilność, czy zaangażowanie społeczności?",
+      "action": "Napisz skrypt do telefonicznego pozyskiwania wolontariuszy na [wydarzenie]. Czy powinniśmy podkreślić osobisty wpływ, pilność, czy zaangażowanie społeczności?"
+    },
+    "standard_campaign": {
+      "title": "Opracuj zestaw narzędzi dla zwolenników do wzmocnienia [kampanii] online.",
+      "label": "Czy powinniśmy dodać wcześniej napisane posty, infografiki lub szablony wideo?",
+      "action": "Opracuj zestaw narzędzi dla zwolenników do wzmocnienia [kampanii] online. Czy powinniśmy dodać wcześniej napisane posty, infografiki lub szablony wideo?"
+    }
+  },
+  "ai_content": {
+    "gpt-4o-mini": {
+      "label": "GPT 4o mini",
+      "description": "Mały model do szybkich, lekkich zadań"
+    },
+    "gpt-4o": {
+      "label": "GPT 4o",
+      "description": "Do złożonych, wieloetapowych zadań"
+    },
+    "gpt-4o-blocks": {
+      "label": "GPT 4o z Blokami",
+      "description": "Współpraca przy pisaniu"
+    }
+  },
+  "ai_context_indicators": {
+    "dependentKeywords": ["to", "tamto", "ono", "jak wspomniano", "wcześniej", "kontynuując", "dalej"],
+    "unresolvedReferences": ["to", "tamto", "te", "tego", "ono"],
+    "questionWords": ["co", "dlaczego", "jak", "kiedy", "gdzie"],
+    "dependentPunctuation": ["...", "--", "(", ")"],
+    "temporalKeywords": ["później", "wczoraj", "wkrótce", "jutro", "wcześniej"]
+  }
+}

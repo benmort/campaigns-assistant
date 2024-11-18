@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl';
 import { ComponentProps } from 'react';
 
 import { SidebarTrigger, useSidebar } from '@/components/ui/sidebar';
@@ -11,9 +12,10 @@ export function SidebarToggle({
   className,
 }: ComponentProps<typeof SidebarTrigger>) {
   const { toggleSidebar } = useSidebar();
+  const content = useTranslations('content');
 
   return (
-    <BetterTooltip content="Toggle Sidebar" align="start">
+    <BetterTooltip content={ content('toggle_sidebar') } align="start">
       <Button
         onClick={toggleSidebar}
         variant="outline"
