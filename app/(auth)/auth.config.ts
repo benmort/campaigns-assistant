@@ -12,9 +12,16 @@ export const authConfig = {
   callbacks: {
     authorized({ auth, request: { nextUrl } }) {
       const isLoggedIn = !!auth?.user;
+      const isVerified = auth?.user?.emailVerified;
+
       const isOnChat = nextUrl.pathname.startsWith('/');
       const isOnRegister = nextUrl.pathname.startsWith('/register');
       const isOnLogin = nextUrl.pathname.startsWith('/login');
+      const isOnVerificationPage = nextUrl.pathname.startsWith('/verify-email');
+
+      if (!!process.env.AUTH_VERIFY_EMAILS && isLoggedIn && !isVerified && !isOnVerificationPage) {
+        return Response.redirect(new URL('/verify-email', nextUrl as unknown as URL));
+      }
 
       if (isLoggedIn && (isOnLogin || isOnRegister)) {
         return Response.redirect(new URL('/', nextUrl as unknown as URL));

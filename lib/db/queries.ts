@@ -5,6 +5,8 @@ import { and, asc, desc, eq, gt } from 'drizzle-orm';
 import { drizzle } from 'drizzle-orm/postgres-js';
 import postgres from 'postgres';
 
+import { generateUUID } from '@/lib/utils';
+
 import {
   user,
   chat,
@@ -28,9 +30,26 @@ const client = postgres(`${process.env.POSTGRES_URL!}?sslmode=require`);
 const db = drizzle(client);
 const SYSTEM_PROMPT_ID = process.env.SYSTEM_PROMPT_ID
 
-export async function getUser(email: string): Promise<Array<User>> {
+export async function getUserByEmail(email: string): Promise<Array<User>> {
   try {
-    return await db.select().from(user).where(eq(user.email, email));
+    return await db
+      .select()
+      .from(user)
+      .where(eq(user.email, email));
+  } catch (error) {
+    console.error('Failed to get user from database', error);
+    throw error;
+  }
+}
+
+export async function getUserByVerificationToken(token: string) {
+  try {
+    return db
+      .select()
+      .from(user)
+      .where(user.emailVerificationToken.equals(token))
+      .limit(1)
+      .then(res => res[0]);
   } catch (error) {
     console.error('Failed to get user from database', error);
     throw error;
@@ -42,11 +61,29 @@ export async function createUser(email: string, password: string) {
   const hash = hashSync(password, salt);
 
   try {
-    return await db.insert(user).values({ email, password: hash });
+    return await db
+      .insert(user)
+      .values({ email, password: hash });
   } catch (error) {
     console.error('Failed to create user in database', error);
     throw error;
   }
+}
+
+export async function generateVerificationToken(userId: string) {
+  const token = generateUUID();
+  await db
+    .update(user)
+    .set({ emailVerificationToken: token })
+    .where(user.id.equals(userId));
+  return token;
+}
+
+export async function updateUserVerificationStatus(userId: string, isVerified: boolean) {
+  await db
+    .update(user)
+    .set({ emailVerified: isVerified, emailVerificationToken: null })
+    .where(updateUsersTable.id.equals(userId));
 }
 
 export async function saveChat({

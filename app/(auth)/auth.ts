@@ -2,7 +2,8 @@ import { compare } from 'bcrypt-ts';
 import NextAuth, { type User, type Session } from 'next-auth';
 import Credentials from 'next-auth/providers/credentials';
 
-import { getUser } from '@/lib/db/queries';
+import { sendVerificationEmail } from '@/lib/sendgrid';
+import { getUserByEmail, generateVerificationToken, updateUserVerificationStatus } from '@/lib/db/queries';
 
 import { authConfig } from './auth.config';
 
@@ -21,11 +22,17 @@ export const {
     Credentials({
       credentials: {},
       async authorize({ email, password }: any) {
-        const users = await getUser(email);
+        const users = await getUserByEmail(email);
         if (users.length === 0) return null;
+
         // biome-ignore lint: Forbidden non-null assertion.
         const passwordsMatch = await compare(password, users[0].password!);
         if (!passwordsMatch) return null;
+
+        if (!!process.env.AUTH_VERIFY_EMAILS && !user.emailVerified) {
+          throw new Error('Email not verified. Please check your inbox.');
+        }
+
         return users[0] as any;
       },
     }),
@@ -34,6 +41,7 @@ export const {
     async jwt({ token, user }) {
       if (user) {
         token.id = user.id;
+        token.emailVerified = user.emailVerified;
       }
 
       return token;
@@ -47,6 +55,7 @@ export const {
     }) {
       if (session.user) {
         session.user.id = token.id as string;
+        session.user.emailVerified = token.emailVerified as boolean;
       }
 
       return session;

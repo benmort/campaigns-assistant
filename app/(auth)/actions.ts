@@ -2,7 +2,7 @@
 
 import { z } from 'zod';
 
-import { createUser, getUser } from '@/lib/db/queries';
+import { createUser, getUserByEmail } from '@/lib/db/queries';
 
 import { signIn } from './auth';
 
@@ -72,7 +72,7 @@ export const register = async (
       return { status: 'invalid_domain' } as RegisterActionState;
     }
 
-    const [user] = await getUser(validatedData.email);
+    const [user] = await getUserByEmail(validatedData.email);
 
     if (user) {
       return { status: 'user_exists' } as RegisterActionState;
