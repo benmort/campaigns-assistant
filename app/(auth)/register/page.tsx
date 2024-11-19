@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import {useTranslations} from 'next-intl';
 import { useActionState, useEffect, useState } from 'react';
 import { toast } from 'sonner';
 
@@ -22,20 +23,23 @@ export default function Page() {
       status: 'idle',
     },
   );
+  const content = useTranslations('content');
 
   useEffect(() => {
-    if (state.status === 'user_exists') {
-      toast.error('Account already exists');
-    } else if (state.status === 'failed') {
-      toast.error('Failed to create account');
-    } else if (state.status === 'invalid_data') {
-      toast.error('Failed validating your submission!');
-    } else if (state.status === 'success') {
-      toast.success('Account created successfully');
+    if (state.status === "user_exists") {
+      toast.error(content('account_exists_notice'));
+    } else if (state.status === "failed") {
+      toast.error(content('acount_create_failed_notice'));
+    } else if (state.status === "invalid_data") {
+      toast.error(content('failed_validation_notice'));
+    } else if (state.status === 'invalid_domain') {
+      toast.error(content('invalid_domain_notice'));
+    } else if (state.status === "success") {
+      toast.success(content('account_created_notice'));
       setIsSuccessful(true);
       router.refresh();
     }
-  }, [state, router]);
+  }, [state, router, content]);
 
   const handleSubmit = (formData: FormData) => {
     setEmail(formData.get('email') as string);
@@ -46,22 +50,22 @@ export default function Page() {
     <div className="flex h-dvh w-screen items-start pt-12 md:pt-0 md:items-center justify-center bg-background">
       <div className="w-full max-w-md overflow-hidden rounded-2xl gap-12 flex flex-col">
         <div className="flex flex-col items-center justify-center gap-2 px-4 text-center sm:px-16">
-          <h3 className="text-xl font-semibold dark:text-zinc-50">Sign Up</h3>
+          <h3 className="text-xl font-semibold dark:text-zinc-50">{ content('sign_up') }</h3>
           <p className="text-sm text-gray-500 dark:text-zinc-400">
-            Create an account with your email and password
+            { content('create_account') }
           </p>
         </div>
         <AuthForm action={handleSubmit} defaultEmail={email}>
-          <SubmitButton isSuccessful={isSuccessful}>Sign Up</SubmitButton>
+          <SubmitButton isSuccessful={isSuccessful}>{ content('sign_up') }</SubmitButton>
           <p className="text-center text-sm text-gray-600 mt-4 dark:text-zinc-400">
-            {'Already have an account? '}
+            { content('already_have_account') }{" "}
             <Link
               href="/login"
               className="font-semibold text-gray-800 hover:underline dark:text-zinc-200"
             >
-              Sign in
+              { content('log_in') }{" "}
             </Link>
-            {' instead.'}
+            { content('instead') }{"."}
           </p>
         </AuthForm>
       </div>

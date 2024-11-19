@@ -107,3 +107,10 @@ export const suggestion = pgTable(
 );
 
 export type Suggestion = InferSelectModel<typeof suggestion>;
+
+export const systemPrompt = pgTable('SystemPrompt', {
+  id: uuid('id').primaryKey().notNull().defaultRandom(),
+  content: json('content').notNull(),
+});
+
+export type SystemPrompt = InferSelectModel<typeof systemPrompt>;

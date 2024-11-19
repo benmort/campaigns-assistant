@@ -1,0 +1,149 @@
+{
+  "meta": {
+    "language": "Italiano"
+  },
+  "globals": {
+    "site_title": "Assistente per le Campagne"
+  },
+  "locales": {
+    "af": "Afrikaans",
+    "de": "Deutsch",
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "ga": "Gaeilge",
+    "hi": "हिन्दी",
+    "it": "Italiano",
+    "nl": "Nederlands",
+    "pl": "Polski",
+    "pt": "Português",
+    "zu": "isiZulu"
+  },
+  "content": {
+    "chat": "Chat",
+    "sign_up": "Registrati",
+    "log_in": "Accedi",
+    "log_out": "Esci",
+    "profile": "Profilo",
+    "register": "Registrati",
+    "toggle": "Attiva/Disattiva",
+    "toggle_sidebar": "Attiva/Disattiva Barra Laterale",
+    "light": "Chiaro",
+    "dark": "Scuro",
+    "mode": "Modalità",
+    "login_account": "Usa la tua email e password per accedere",
+    "create_account": "Crea un account con la tua email e password",
+    "new_chat": "Nuova Chat",
+    "new_chat_hero": "Un chatbot AI progettato per assistere le NFP progressiste",
+    "no_chat": "Nessuna chat trovata",
+    "history": "Cronologia",
+    "switch_language": "Lingua",
+    "already_have_account": "Hai già un account?",
+    "dont_have_account": "Non hai un account?",
+    "instead": "invece",
+    "account_exists_notice": "L'account esiste già",
+    "acount_create_failed_notice": "Creazione dell'account fallita",
+    "failed_validation_notice": "Convalida del modulo fallita!",
+    "invalid_domain_notice": "Convalida del dominio e-mail non riuscita!",
+    "account_created_notice": "Account creato con successo",
+    "invalid_credentials": "Credenziali non valide!",
+    "overview_notice": "Questo è un chatbot open source..",
+    "send_message": "Invia un messaggio...",
+    "please_wait": "Attendi che il modello completi la sua risposta!",
+    "splash_overview_message": "Accedi per iniziare!",
+    "sidebar_explainer": "Le tue conversazioni appariranno qui una volta che inizi a chattare!",
+    "delete": "Elimina",
+    "deleting_chat": "Eliminazione della chat...",
+    "deleted_chat_successfully": "Chat eliminata con successo",
+    "failed_chat_deletion": "Eliminazione della chat fallita",
+    "login_to_save_chats": "Accedi per salvare e rivedere le chat precedenti!",
+    "today": "Oggi",
+    "yesterday": "Ieri",
+    "last_7_days": "Ultimi 7 giorni",
+    "last_30_days": "Ultimi 30 giorni",
+    "older": "Più vecchio",
+    "conversation_will_appear": "Le tue conversazioni appariranno qui una volta che inizi a chattare!",
+    "cannot_undo": "Questa azione non può essere annullata. Questo eliminerà permanentemente la chat e la rimuoverà dai nostri server.",
+    "continue": "Continua",
+    "sure": "Sei assolutamente sicuro?",
+    "thinking": "Pensando",
+    "view_changes": "Visualizza modifiche",
+    "copy": "Copia",
+    "copy_clipboard": "Copia negli appunti",
+    "copied_clipboard": "Copiato negli appunti!",
+    "view_previous": "Visualizza versione precedente",
+    "view_next": "Visualizza versione successiva",
+    "upvote": "Vota a favore",
+    "upvote_resp": "Vota a favore della risposta",
+    "upvoting_resp": "Votando a favore della risposta",
+    "upvoted_resp": "Votato a favore della risposta",
+    "upvote_resp_failed": "Voto a favore della risposta fallito",
+    "downvote": "Vota contro",
+    "downvote_resp": "Vota contro la risposta",
+    "downvoting_resp": "Votando contro la risposta",
+    "downvoted_resp": "Votato contro la risposta",
+    "downvote_resp_failed": "Voto contro la risposta fallito",
+    "back": "Indietro",
+    "admin": {
+      "admin": "Admin",
+      "admin_explanation": "Gestisci le impostazioni di sistema e negozio dalle opzioni sottostanti",
+      "store": "Archivio",
+      "store_explainer": "Gestisci i tuoi documenti archiviati",
+      "system": "Sistema",
+      "system_explanation": "Impostazioni e configurazioni di sistema",
+      "loading_documents": "Caricamento documenti",
+      "no_documents": "Nessun documento trovato nell'archivio",
+      "id": "ID",
+      "file": "File",
+      "content_type": "Tipo di contenuto"
+    }
+  },
+  "404": {
+    "page_title": "Pagina Non Trovata",
+    "page_description": "Siamo spiacenti, la pagina che stai cercando non esiste.",
+    "home_link": "Torna alla home"
+  },
+  "suggested_prompts": {
+    "strategic_campaign": {
+      "title": "Aiutami a progettare una strategia di 3 mesi per sostenere [politica o causa]",
+      "label": "Quali sono le tappe fondamentali, il pubblico di destinazione e le piattaforme adatte a questo tema?",
+      "action": "Aiutami a progettare una strategia di 3 mesi per sostenere [politica o causa]. Quali sono le tappe fondamentali, il pubblico di destinazione e le piattaforme adatte a questo tema?"
+    },
+    "social_toolkit": {
+      "title": "Sviluppa un kit di strumenti per i sostenitori per amplificare [campagna] online.",
+      "label": "Dovremmo includere post pre-scritti, infografiche o modelli di video?",
+      "action": "Sviluppa un kit di strumenti per i sostenitori per amplificare [campagna] online. Dovremmo includere post pre-scritti, infografiche o modelli di video?"
+    },
+    "volunteer_mobilisation": {
+      "title": "Scrivi uno script per il telemarketing per reclutare volontari per [evento].",
+      "label": "Dovremmo enfatizzare l'impatto personale, l'urgenza o il coinvolgimento della comunità?",
+      "action": "Scrivi uno script per il telemarketing per reclutare volontari per [evento]. Dovremmo enfatizzare l'impatto personale, l'urgenza o il coinvolgimento della comunità?"
+    },
+    "standard_campaign": {
+      "title": "Sviluppa un kit di strumenti per i sostenitori per amplificare [campagna] online.",
+      "label": "Dovremmo includere post pre-scritti, infografiche o modelli di video?",
+      "action": "Sviluppa un kit di strumenti per i sostenitori per amplificare [campagna] online. Dovremmo includere post pre-scritti, infografiche o modelli di video?"
+    }
+  },
+  "ai_content": {
+    "gpt-4o-mini": {
+      "label": "GPT 4o mini",
+      "description": "Modello piccolo per attività rapide e leggere"
+    },
+    "gpt-4o": {
+      "label": "GPT 4o",
+      "description": "Per compiti complessi e multi-step"
+    },
+    "gpt-4o-blocks": {
+      "label": "GPT 4o con Blocchi",
+      "description": "Collaborazione alla scrittura"
+    }
+  },
+  "ai_context_indicators": {
+    "dependentKeywords": ["questo", "quello", "esso", "come detto", "precedentemente", "continuando", "ulteriormente"],
+    "unresolvedReferences": ["questo", "quello", "questi", "quelli", "esso"],
+    "questionWords": ["cosa", "perché", "come", "quando", "dove"],
+    "dependentPunctuation": ["...", "--", "(", ")"],
+    "temporalKeywords": ["più tardi", "ieri", "presto", "domani", "prima"]
+  }
+}

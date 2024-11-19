@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "language": "English"
+  },
+  "globals": {
+    "site_title": "Campagins Assistant"
+  },
+  "locales": {
+    "af": "Afrikaans",
+    "de": "Deutsch",
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "ga": "Gaeilge",
+    "hi": "हिन्दी",
+    "it": "Italiano",
+    "nl": "Nederlands",
+    "pl": "Polski",
+    "pt": "Português",
+    "zu": "isiZulu"
+  },
+  "content": {
+    "chat": "Chat",
+    "sign_up": "Sign Up",
+    "log_in": "Login",
+    "log_out": "Logout",
+    "profile": "Profile",
+    "register": "Register",
+    "toggle": "Toggle",
+    "toggle_sidebar": "Toggle Sidebar",
+    "light": "Light",
+    "dark": "Dark",
+    "mode": "Mode",
+    "login_account": "Use your email and password to login",
+    "create_account": "Create an account with your email and password",
+    "new_chat": "New Chat",
+    "new_chat_hero": "An AI Chatbot designed to assist progressive NFP",
+    "no_chat": "No chats found",
+    "history": "History",
+    "switch_language": "Language",
+    "already_have_account": "Already have an account?",
+    "dont_have_account": "Don't have an account?",
+    "instead": "instead",
+    "account_exists_notice": "Account already exists",
+    "acount_create_failed_notice": "Failed to create account",
+    "failed_validation_notice": "Failed validating your submission!",
+    "invalid_domain_notice": "Failed validating your email domain!",
+    "account_created_notice": "Account created successfully",
+    "invalid_credentials": "Invalid credentials!",
+    "overview_notice": "This is an open source Chatbot..",
+    "send_message": "Send a message...",
+    "please_wait": "Please wait for the model to finish its response!",
+    "splash_overview_message": "Login to get started!",
+    "sidebar_explainer": "Your conversations will appear here once you start chatting!",
+    "delete": "Delete",
+    "deleting_chat": "Deleting Chat...",
+    "deleted_chat_successfully": "Chat deleted successfully",
+    "failed_chat_deletion": "Failed to delete chat",
+    "login_to_save_chats": "Login to save and revisit previous chats!",
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "last_7_days": "Last 7 days",
+    "last_30_days": "Last 30 days",
+    "older": "Older",
+    "conversation_will_appear": "Your conversations will appear here once you start chatting!",
+    "cannot_undo": "This action cannot be undone. This will permanently delete your chat and remove it from our servers.",
+    "continue": "Continue",
+    "sure": "Are you absolutely sure?",
+    "thinking": "Thinking",
+    "view_changes": "View changes",
+    "copy": "Copy",
+    "copy_clipboard": "Copy to clipboard",
+    "copied_clipboard": "Copied to clipboard!",
+    "view_previous": "View Previous version",
+    "view_next": "View Next version",
+    "view_changes": "View changes",
+    "upvote": "Upvote",
+    "upvote_resp": "Upvote Response",
+    "upvoting_resp": "Upvoting Response",
+    "upvoted_resp": "Upvoted Response",
+    "upvote_resp_failed": "Upvote Response Failed",
+    "downvote": "Downvote ",
+    "downvote_resp": "Downvote Response",
+    "downvoting_resp": "Downvoting Response",
+    "downvoted_resp": "Downvoted Response",
+    "downvote_resp_failed": "Downvote Response Failed",
+    "back": "Back",
+    "admin": {
+      "admin": "Admin",
+      "admin_explanation": "Manage system and store settings from the options below",
+      "store": "Store",
+      "store_explainer": "Manage your stored documents",
+      "system": "System",
+      "system_explanation": "System settings and configurations",
+      "loading_documents": "Loading Documents",
+      "no_documents": "No documents found in Store",
+      "id": "ID",
+      "file": "File",
+      "content_type": "Content Type"
+    }
+  },
+  "404": {
+    "page_title": "Page Not Found",
+    "page_description": "Sorry, the page you are looking for does not exist.",
+    "home_link": "Go back home"
+  },
+  "suggested_prompts": {
+    "strategic_campaign": {
+      "title": "Help me design a 3-month strategy to advocate for [policy or cause]",
+      "label": "What are the key milestones, target audiences, and platforms that align with this issue?",
+      "action": "Help me design a 3-month strategy to advocate for [policy or cause]. What are the key milestones, target audiences, and platforms that align with this issue?"
+    },
+    "social_toolkit": {
+      "title": "Develop a toolkit for supporters to amplify [campaign] online.",
+      "label": "Should we include pre-written posts, infographics, or video templates?",
+      "action": "Develop a toolkit for supporters to amplify [campaign] online. Should we include pre-written posts, infographics, or video templates?"
+    },
+    "volunteer_mobilisation": {
+      "title": "Write a phone banking script to recruit volunteers for [event].",
+      "label": "Should we emphasize the personal impact, urgency, or community involvement?",
+      "action": "Write a phone banking script to recruit volunteers for [event]. Should we emphasize the personal impact, urgency, or community involvement?"
+    },
+    "standard_campaign": {
+      "title": "Develop a toolkit for supporters to amplify [campaign] online.",
+      "label": "Should we include pre-written posts, infographics, or video templates?",
+      "action": "Develop a toolkit for supporters to amplify [campaign] online. Should we include pre-written posts, infographics, or video templates?"
+    }
+  },
+  "ai_content": {
+    "gpt-4o-mini": {
+      "label": "GPT 4o mini",
+      "description": "Small model for fast, lightweight tasks"
+    },
+    "gpt-4o": {
+      "label": "GPT 4o",
+      "description": "For complex, multi-step tasks"
+    },
+    "gpt-4o-blocks": {
+      "label": "GPT 4o with Blocks",
+      "description": "Collaborate with writing"
+    }
+  },
+  "ai_context_indicators": {
+    "dependentKeywords": ["this", "that", "it", "as mentioned", "earlier", "continuing", "further"],
+    "unresolvedReferences": ["this", "that", "these", "those", "it"],
+    "questionWords": ["what", "why", "how", "when", "where"],
+    "dependentPunctuation": ["...", "--", "(", ")"],
+    "temporalKeywords": ["later", "yesterday", "soon", "tomorrow", "earlier"]
+  }
+}

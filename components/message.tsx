@@ -3,6 +3,7 @@
 import type { Message } from 'ai';
 import cx from 'classnames';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import type { Dispatch, SetStateAction } from 'react';
 
 import type { Vote } from '@/lib/db/schema';
@@ -145,7 +146,7 @@ export const PreviewMessage = ({
 
 export const ThinkingMessage = () => {
   const role = 'assistant';
-
+  const content = useTranslations('content')
   return (
     <motion.div
       className="w-full mx-auto max-w-3xl px-4 group/message "
@@ -167,7 +168,7 @@ export const ThinkingMessage = () => {
 
         <div className="flex flex-col gap-2 w-full">
           <div className="flex flex-col gap-4 text-muted-foreground">
-            Thinking...
+            { content('thinking') }...
           </div>
         </div>
       </div>

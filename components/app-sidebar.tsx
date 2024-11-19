@@ -2,6 +2,7 @@
 
 import type { User } from 'next-auth';
 import { useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 
 import { PlusIcon } from '@/components/icons';
 import { SidebarHistory } from '@/components/sidebar-history';
@@ -23,6 +24,8 @@ import Link from 'next/link';
 export function AppSidebar({ user }: { user: User | undefined }) {
   const router = useRouter();
   const { setOpenMobile } = useSidebar();
+  const globals = useTranslations('globals')
+  const content = useTranslations('content')
 
   return (
     <Sidebar className="group-data-[side=left]:border-r-0">
@@ -37,10 +40,10 @@ export function AppSidebar({ user }: { user: User | undefined }) {
               className="flex flex-row gap-3 items-center"
             >
               <span className="text-lg font-semibold px-2 hover:bg-muted rounded-md cursor-pointer">
-                Chatbot
+                { globals('site_title') }
               </span>
             </Link>
-            <BetterTooltip content="New Chat" align="start">
+            <BetterTooltip content={ content('new_chat') } align="start">
               <Button
                 variant="ghost"
                 type="button"

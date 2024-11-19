@@ -48,8 +48,13 @@ export interface RegisterActionState {
     | 'success'
     | 'failed'
     | 'user_exists'
+    | 'invalid_domain'
     | 'invalid_data';
 }
+
+// Default domain if not set in `.env.local`
+const DEFAULT_ALLOWED_DOMAIN = 'the-open.net';
+const allowedDomain = process.env.ALLOWED_EMAIL_DOMAIN || DEFAULT_ALLOWED_DOMAIN;
 
 export const register = async (
   _: RegisterActionState,
@@ -60,6 +65,12 @@ export const register = async (
       email: formData.get('email'),
       password: formData.get('password'),
     });
+
+    // Check domain whitelist
+    const emailDomain = validatedData.email.split('@')[1];
+    if (emailDomain !== allowedDomain) {
+      return { status: 'invalid_domain' } as RegisterActionState;
+    }
 
     const [user] = await getUser(validatedData.email);
 
