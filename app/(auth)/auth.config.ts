@@ -19,8 +19,10 @@ export const authConfig = {
       const isOnLogin = nextUrl.pathname.startsWith('/login');
       const isOnVerificationPage = nextUrl.pathname.startsWith('/verify-email');
 
-      if (!!process.env.AUTH_VERIFY_EMAILS && isLoggedIn && !isVerified && !isOnVerificationPage) {
-        return Response.redirect(new URL('/verify-email', nextUrl as unknown as URL));
+      if (process.env.AUTH_VERIFY_EMAILS === 'true') {
+        if (isLoggedIn && !isVerified && !isOnVerificationPage) {
+          return Response.redirect(new URL('/verify-email', nextUrl as unknown as URL));
+        }
       }
 
       if (isLoggedIn && (isOnLogin || isOnRegister)) {
