@@ -1,0 +1,149 @@
+{
+  "meta": {
+    "language": "Deutsch"
+  },
+  "globals": {
+    "site_title": "Kampagnenassistent"
+  },
+  "locales": {
+    "af": "Afrikaans",
+    "de": "Deutsch",
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "ga": "Gaeilge",
+    "hi": "हिन्दी",
+    "it": "Italiano",
+    "nl": "Nederlands",
+    "pl": "Polski",
+    "pt": "Português",
+    "zu": "isiZulu"
+  },
+  "content": {
+    "chat": "Chat",
+    "sign_up": "Registrieren",
+    "log_in": "Anmelden",
+    "log_out": "Abmelden",
+    "profile": "Profil",
+    "register": "Registrieren",
+    "toggle": "Umschalten",
+    "toggle_sidebar": "Seitenleiste umschalten",
+    "light": "Hell",
+    "dark": "Dunkel",
+    "mode": "Modus",
+    "login_account": "Verwenden Sie Ihre E-Mail und Ihr Passwort zum Anmelden",
+    "create_account": "Erstellen Sie ein Konto mit Ihrer E-Mail und Ihrem Passwort",
+    "new_chat": "Neuer Chat",
+    "new_chat_hero": "Ein KI-Chatbot, der entwickelt wurde, um progressive NPOs zu unterstützen",
+    "no_chat": "Keine Chats gefunden",
+    "history": "Verlauf",
+    "switch_language": "Sprache",
+    "already_have_account": "Haben Sie bereits ein Konto?",
+    "dont_have_account": "Haben Sie kein Konto?",
+    "instead": "stattdessen",
+    "account_exists_notice": "Konto existiert bereits",
+    "acount_create_failed_notice": "Konto konnte nicht erstellt werden",
+    "failed_validation_notice": "Validierung Ihrer Eingabe fehlgeschlagen!",
+    "invalid_domain_notice": "Die Überprüfung Ihrer E-Mail-Domain ist fehlgeschlagen!",
+    "account_created_notice": "Konto erfolgreich erstellt",
+    "invalid_credentials": "Ungültige Anmeldedaten!",
+    "overview_notice": "Dies ist ein Open-Source-Chatbot..",
+    "send_message": "Eine Nachricht senden...",
+    "please_wait": "Bitte warten Sie, bis das Modell seine Antwort abgeschlossen hat!",
+    "splash_overview_message": "Melden Sie sich an, um loszulegen!",
+    "sidebar_explainer": "Ihre Unterhaltungen erscheinen hier, sobald Sie zu chatten beginnen!",
+    "delete": "Löschen",
+    "deleting_chat": "Chat wird gelöscht...",
+    "deleted_chat_successfully": "Chat erfolgreich gelöscht",
+    "failed_chat_deletion": "Chat konnte nicht gelöscht werden",
+    "login_to_save_chats": "Melden Sie sich an, um frühere Chats zu speichern und erneut aufzurufen!",
+    "today": "Heute",
+    "yesterday": "Gestern",
+    "last_7_days": "Letzte 7 Tage",
+    "last_30_days": "Letzte 30 Tage",
+    "older": "Älter",
+    "conversation_will_appear": "Ihre Unterhaltungen erscheinen hier, sobald Sie zu chatten beginnen!",
+    "cannot_undo": "Diese Aktion kann nicht rückgängig gemacht werden. Dadurch wird Ihr Chat dauerhaft gelöscht und von unseren Servern entfernt.",
+    "continue": "Fortfahren",
+    "sure": "Sind Sie absolut sicher?",
+    "thinking": "Denken",
+    "view_changes": "Änderungen anzeigen",
+    "copy": "Kopieren",
+    "copy_clipboard": "In die Zwischenablage kopieren",
+    "copied_clipboard": "In die Zwischenablage kopiert!",
+    "view_previous": "Vorherige Version anzeigen",
+    "view_next": "Nächste Version anzeigen",
+    "upvote": "Befürworten",
+    "upvote_resp": "Antwort befürworten",
+    "upvoting_resp": "Antwort befürworten",
+    "upvoted_resp": "Antwort befürwortet",
+    "upvote_resp_failed": "Befürworten der Antwort fehlgeschlagen",
+    "downvote": "Ablehnen",
+    "downvote_resp": "Antwort ablehnen",
+    "downvoting_resp": "Antwort ablehnen",
+    "downvoted_resp": "Antwort abgelehnt",
+    "downvote_resp_failed": "Ablehnen der Antwort fehlgeschlagen",
+    "back": "Zurück",
+    "admin": {
+      "admin": "Admin",
+      "admin_explanation": "Verwalten Sie System- und Speichereinstellungen über die unten stehenden Optionen",
+      "store": "Speicher",
+      "store_explainer": "Verwalten Sie Ihre gespeicherten Dokumente",
+      "system": "System",
+      "system_explanation": "Systemeinstellungen und Konfigurationen",
+      "loading_documents": "Dokumente werden geladen",
+      "no_documents": "Keine Dokumente im Speicher gefunden",
+      "id": "ID",
+      "file": "Datei",
+      "content_type": "Inhaltstyp"
+    }
+  },
+  "404": {
+    "page_title": "Seite Nicht Gefunden",
+    "page_description": "Entschuldigung, die gesuchte Seite existiert nicht.",
+    "home_link": "Zurück zur Startseite"
+  },
+  "suggested_prompts": {
+    "strategic_campaign": {
+      "title": "Helfen Sie mir, eine 3-monatige Strategie zur Förderung von [Politik oder Anliegen] zu entwerfen",
+      "label": "Was sind die wichtigsten Meilensteine, Zielgruppen und Plattformen, die mit diesem Thema übereinstimmen?",
+      "action": "Helfen Sie mir, eine 3-monatige Strategie zur Förderung von [Politik oder Anliegen] zu entwerfen. Was sind die wichtigsten Meilensteine, Zielgruppen und Plattformen, die mit diesem Thema übereinstimmen?"
+    },
+    "social_toolkit": {
+      "title": "Entwickeln Sie ein Toolkit, damit Unterstützer [Kampagne] online verstärken können.",
+      "label": "Sollten wir vorgefertigte Beiträge, Infografiken oder Videovorlagen einfügen?",
+      "action": "Entwickeln Sie ein Toolkit, damit Unterstützer [Kampagne] online verstärken können. Sollten wir vorgefertigte Beiträge, Infografiken oder Videovorlagen einfügen?"
+    },
+    "volunteer_mobilisation": {
+      "title": "Schreiben Sie ein Telefonbanking-Skript, um Freiwillige für [Ereignis] zu rekrutieren.",
+      "label": "Sollen wir den persönlichen Einfluss, die Dringlichkeit oder die Gemeinschaftsbeteiligung betonen?",
+      "action": "Schreiben Sie ein Telefonbanking-Skript, um Freiwillige für [Ereignis] zu rekrutieren. Sollen wir den persönlichen Einfluss, die Dringlichkeit oder die Gemeinschaftsbeteiligung betonen?"
+    },
+    "standard_campaign": {
+      "title": "Entwickeln Sie ein Toolkit, damit Unterstützer [Kampagne] online verstärken können.",
+      "label": "Sollten wir vorgefertigte Beiträge, Infografiken oder Videovorlagen einfügen?",
+      "action": "Entwickeln Sie ein Toolkit, damit Unterstützer [Kampagne] online verstärken können. Sollten wir vorgefertigte Beiträge, Infografiken oder Videovorlagen einfügen?"
+    }
+  },
+  "ai_content": {
+    "gpt-4o-mini": {
+      "label": "GPT 4o mini",
+      "description": "Kleines Modell für schnelle, leichte Aufgaben"
+    },
+    "gpt-4o": {
+      "label": "GPT 4o",
+      "description": "Für komplexe, mehrstufige Aufgaben"
+    },
+    "gpt-4o-blocks": {
+      "label": "GPT 4o mit Blöcken",
+      "description": "Zusammenarbeit beim Schreiben"
+    }
+  },
+  "ai_context_indicators": {
+    "dependentKeywords": ["dies", "das", "es", "wie erwähnt", "früher", "fortsetzen", "weiter"],
+    "unresolvedReferences": ["dies", "das", "diese", "jene", "es"],
+    "questionWords": ["was", "warum", "wie", "wann", "wo"],
+    "dependentPunctuation": ["...", "–", "(", ")"],
+    "temporalKeywords": ["später", "gestern", "bald", "morgen", "früher"]
+  }
+}

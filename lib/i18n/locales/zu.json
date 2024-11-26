@@ -1,0 +1,149 @@
+{
+  "meta": {
+    "language": "isiZulu"
+  },
+  "globals": {
+    "site_title": "Umsizi Wokukhangisa"
+  },
+  "locales": {
+    "af": "Afrikaans",
+    "de": "Deutsch",
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "ga": "Gaeilge",
+    "hi": "हिन्दी",
+    "it": "Italiano",
+    "nl": "Nederlands",
+    "pl": "Polski",
+    "pt": "Português",
+    "zu": "isiZulu"
+  },
+  "content": {
+    "chat": "Xoxa",
+    "sign_up": "Bhalisa",
+    "log_in": "Ngena",
+    "log_out": "Phuma",
+    "profile": "Iphrofayili",
+    "register": "Bhalisa",
+    "toggle": "Shintsha",
+    "toggle_sidebar": "Shintsha i-Sidebar",
+    "light": "Ukukhanya",
+    "dark": "Ubumnyama",
+    "mode": "Imodi",
+    "login_account": "Sebenzisa i-imeyili yakho nephasiwedi ukungena",
+    "create_account": "Yakha i-akhawunti nge-imeyili nephasiwedi yakho",
+    "new_chat": "Xoxa Okusha",
+    "new_chat_hero": "I-AI Chatbot eyenzelwe ukusiza izinhlangano ezizimele ezinabantu abaphokophelele",
+    "no_chat": "Ayikho imiyalezo etholakele",
+    "history": "Umlando",
+    "switch_language": "Ulimi",
+    "already_have_account": "Usunayo i-akhawunti?",
+    "dont_have_account": "Awunayo i-akhawunti?",
+    "instead": "esikhundleni salokho",
+    "account_exists_notice": "I-akhawunti isivele ikhona",
+    "acount_create_failed_notice": "Ukudala i-akhawunti kwehlulekile",
+    "failed_validation_notice": "Ukuhlolwa kokuthunyelwe kwakho kwehlulekile!",
+    "invalid_domain_notice": "Yehlulekile ukuqinisekisa isizinda sakho se-imeyili!",
+    "account_created_notice": "I-akhawunti yadalwa ngempumelelo",
+    "invalid_credentials": "Izifakazelo azikho kahle!",
+    "overview_notice": "Lo ngumshini we-chatbot ovulekile..",
+    "send_message": "Thumela umlayezo...",
+    "please_wait": "Sicela ulinde ukuthi imodeli iqede ukuphendula!",
+    "splash_overview_message": "Ngena ukuze uqale!",
+    "sidebar_explainer": "Imiyalezo yakho izovela lapha uma usuqalile ukuxoxa!",
+    "delete": "Susa",
+    "deleting_chat": "Kususwa Umlayezo...",
+    "deleted_chat_successfully": "Umlayezo ususiwe ngempumelelo",
+    "failed_chat_deletion": "Kwehlulekile ukususa umlayezo",
+    "login_to_save_chats": "Ngena ukuze ulondoloze futhi uphinde ubone imiyalezo yangaphambilini!",
+    "today": "Namuhla",
+    "yesterday": "Izolo",
+    "last_7_days": "Izinsuku eziyi-7 ezedlule",
+    "last_30_days": "Izinsuku eziyi-30 ezedlule",
+    "older": "Endala",
+    "conversation_will_appear": "Imiyalezo yakho izovela lapha uma usuqalile ukuxoxa!",
+    "cannot_undo": "Lesi senzo ngeke sibuyele emuva. Lokhu kuzokususa umlayezo wakho unomphela futhi ususe kuzingodo zethu.",
+    "continue": "Qhubeka",
+    "sure": "Uqinisekile ngempela?",
+    "thinking": "Ucabangisisa",
+    "view_changes": "Buka izinguquko",
+    "copy": "Kopisha",
+    "copy_clipboard": "Kopisha ku-clipboard",
+    "copied_clipboard": "Kopishwe ku-clipboard!",
+    "view_previous": "Buka inguqulo edlule",
+    "view_next": "Buka inguqulo elandelayo",
+    "upvote": "Vota phezulu",
+    "upvote_resp": "Vota phezulu impendulo",
+    "upvoting_resp": "Vota phezulu impendulo",
+    "upvoted_resp": "Votile phezulu impendulo",
+    "upvote_resp_failed": "Ukuvota phezulu impendulo kwehlulekile",
+    "downvote": "Vota phansi",
+    "downvote_resp": "Vota phansi impendulo",
+    "downvoting_resp": "Vota phansi impendulo",
+    "downvoted_resp": "Votile phansi impendulo",
+    "downvote_resp_failed": "Ukuvota phansi impendulo kwehlulekile",
+    "back": "Emuva",
+    "admin": {
+      "admin": "Umphathi",
+      "admin_explanation": "Phatha izilungiselelo zesistimu nezitolo ngezansi",
+      "store": "Isitoreji",
+      "store_explainer": "Phatha imibhalo yakho egcinwe",
+      "system": "Uhlelo",
+      "system_explanation": "Izilungiselelo nezinhlelo zesistimu",
+      "loading_documents": "Kulayishwa imibhalo",
+      "no_documents": "Akukho mibhalo etholakele esitoreji",
+      "id": "ID",
+      "file": "Ifayela",
+      "content_type": "Uhlobo lokuqukethwe"
+    }
+  },
+  "404": {
+    "page_title": "Ikhasi Alitholakali",
+    "page_description": "Uxolo, ikhasi olifunayo alikho.",
+    "home_link": "Buyela ekhaya"
+  },
+  "suggested_prompts": {
+    "strategic_campaign": {
+      "title": "Ngisize ukudizayina isu lezinyanga ezi-3 zokuxhasa [umgomo noma umbangela]",
+      "label": "Yiziphi izimpawu ezibalulekile, izethameli ezihlosiwe, namapulatifomu ahambisana nalolu daba?",
+      "action": "Ngisize ukudizayina isu lezinyanga ezi-3 zokuxhasa [umgomo noma umbangela]. Yiziphi izimpawu ezibalulekile, izethameli ezihlosiwe, namapulatifomu ahambisana nalolu daba?"
+    },
+    "social_toolkit": {
+      "title": "Yakha amathuluzi okwesekela abantu abaxhasa [umkhankaso] ku-inthanethi.",
+      "label": "Ingabe kufanele sifake izikhangiso ezibhaliwe ngaphambilini, izithombe noma amavidiyo?",
+      "action": "Yakha amathuluzi okwesekela abantu abaxhasa [umkhankaso] ku-inthanethi. Ingabe kufanele sifake izikhangiso ezibhaliwe ngaphambilini, izithombe noma amavidiyo?"
+    },
+    "volunteer_mobilisation": {
+      "title": "Bhala iskripthi se-telemarketing sokubiza izisebenzi zokuzithandela ze-[isenzakalo].",
+      "label": "Ingabe kufanele sigcizelele umthelela womuntu, okuphuthumayo, noma ukubandakanyeka komphakathi?",
+      "action": "Bhala iskripthi se-telemarketing sokubiza izisebenzi zokuzithandela ze-[isenzakalo]. Ingabe kufanele sigcizelele umthelela womuntu, okuphuthumayo, noma ukubandakanyeka komphakathi?"
+    },
+    "standard_campaign": {
+      "title": "Yakha amathuluzi okwesekela abantu abaxhasa [umkhankaso] ku-inthanethi.",
+      "label": "Ingabe kufanele sifake izikhangiso ezibhaliwe ngaphambilini, izithombe noma amavidiyo?",
+      "action": "Yakha amathuluzi okwesekela abantu abaxhasa [umkhankaso] ku-inthanethi. Ingabe kufanele sifake izikhangiso ezibhaliwe ngaphambilini, izithombe noma amavidiyo?"
+    }
+  },
+  "ai_content": {
+    "gpt-4o-mini": {
+      "label": "GPT 4o mini",
+      "description": "Imodeli encane yemisebenzi esheshayo neselula"
+    },
+    "gpt-4o": {
+      "label": "GPT 4o",
+      "description": "Yemisebenzi eyinkimbinkimbi, enezinyathelo eziningi"
+    },
+    "gpt-4o-blocks": {
+      "label": "GPT 4o neziqephu",
+      "description": "Sebenzisana embhalweni"
+    }
+  },
+  "ai_context_indicators": {
+    "dependentKeywords": ["lokhu", "lolo", "kho", "njengoba kukhulunywe", "ngaphambilini", "kuqhubeka", "phambili"],
+    "unresolvedReferences": ["lokhu", "lolo", "lawa", "lawo", "kho"],
+    "questionWords": ["yini", "kungani", "kanjani", "nini", "kuphi"],
+    "dependentPunctuation": ["...", "--", "(", ")"],
+    "temporalKeywords": ["kamva", "izolo", "kungekudala", "kusasa", "ngaphambilini"]
+  }
+}

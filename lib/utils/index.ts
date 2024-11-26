@@ -222,3 +222,8 @@ export function getMessageIdFromAnnotations(message: Message) {
   // @ts-expect-error messageIdFromServer is not defined in MessageAnnotation
   return annotation.messageIdFromServer;
 }
+
+export function getLocalesArray() {
+  return ["en", "es", "fr", "de", "hi", "pt", "it", "nl", "pl", "ga", "zu", "af"];
+}
+

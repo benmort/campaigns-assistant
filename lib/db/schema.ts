@@ -15,6 +15,8 @@ export const user = pgTable('User', {
   id: uuid('id').primaryKey().notNull().defaultRandom(),
   email: varchar('email', { length: 64 }).notNull(),
   password: varchar('password', { length: 64 }),
+  emailVerified: boolean('email_verified').default(false),
+  emailVerificationToken: text('email_verification_token'),
 });
 
 export type User = InferSelectModel<typeof user>;
@@ -107,3 +109,15 @@ export const suggestion = pgTable(
 );
 
 export type Suggestion = InferSelectModel<typeof suggestion>;
+
+export const systemPrompt = pgTable('SystemPrompt', {
+  id: uuid('id').primaryKey().notNull().defaultRandom(),
+  content: json('content').notNull(),
+});
+
+export type SystemPrompt = InferSelectModel<typeof systemPrompt>;
+
+export const updateUsersTable = pgTable('users', {
+  emailVerified: boolean('email_verified').default(false),
+  emailVerificationToken: text('email_verification_token'),
+});
