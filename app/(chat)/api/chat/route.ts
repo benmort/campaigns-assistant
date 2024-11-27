@@ -26,7 +26,8 @@ export async function POST(request: Request) {
     id,
     messages,
     modelId,
-  }: { id: string; messages: Message[]; modelId: string } =
+    rag
+  }: { id: string; messages: Message[]; modelId: string, rag: boolean } =
     await request.json();
 
   const session = await auth();
@@ -60,7 +61,15 @@ export async function POST(request: Request) {
     ],
   });
 
-  const result = await createTextStream(id, model, modelId, userMessage as any, messages, session as any)
+  const result = await createTextStream(
+    id,
+    model,
+    modelId,
+    userMessage as any,
+    messages,
+    session as any,
+    rag
+  )
 
   /* >> to replace below if needed
   return result.toDataStreamResponse({

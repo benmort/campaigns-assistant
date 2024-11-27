@@ -12,6 +12,7 @@ import { PreviewMessage, ThinkingMessage } from '@/components/message';
 import { useScrollToBottom } from '@/components/use-scroll-to-bottom';
 import type { Vote } from '@/lib/db/schema';
 import { fetcher } from '@/lib/utils';
+import { getRagCookie } from '@/lib/utils/cookies-client';
 
 import { Block, type UIBlock } from './block';
 import { BlockStreamHandler } from './block-stream-handler';
@@ -28,6 +29,7 @@ export function Chat({
   selectedModelId: string;
 }) {
   const { mutate } = useSWRConfig();
+  const rag = getRagCookie();
 
   const {
     messages,
@@ -40,7 +42,7 @@ export function Chat({
     stop,
     data: streamingData,
   } = useChat({
-    body: { id, modelId: selectedModelId },
+    body: { id, modelId: selectedModelId, rag },
     initialMessages,
     onFinish: () => {
       mutate('/api/history');
