@@ -15,9 +15,9 @@ export function SplashOverview(){
       transition={{ delay: 0.5 }}
     >
       <div className="border rounded-lg p-6 flex flex-col gap-4 text-zinc-500 text-sm dark:text-zinc-400 dark:border-zinc-700">
-        <p className="flex flex-row justify-center gap-4 items-center text-zinc-900 dark:text-zinc-50 font-semibold">
+        <h3 className="flex flex-row justify-center gap-4 items-center text-zinc-900 dark:text-zinc-50 font-semibold">
           { globals('site_title') }
-        </p>
+        </h3>
         <p>
           { content('splash_overview_message') }
         </p>

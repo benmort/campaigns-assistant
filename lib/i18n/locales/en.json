@@ -47,7 +47,7 @@
     "invalid_domain_notice": "Failed validating your email domain!",
     "account_created_notice": "Account created successfully",
     "invalid_credentials": "Invalid credentials!",
-    "overview_notice": "This is an open source Chatbot..",
+    "overview_notice": "AI for Advocacy",
     "send_message": "Send a message...",
     "please_wait": "Please wait for the model to finish its response!",
     "splash_overview_message": "Login to get started!",
