@@ -26,7 +26,7 @@ const toolsPromptTemplate = `
 
 // Create a structured prompt with optional examples
 export function createSystemPrompt(modelId: string, summarisedContext: string) {
-  let prompt = `
+  const prompt = `
     ## Context
     ${summarisedContext}
 

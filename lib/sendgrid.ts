@@ -1,9 +1,13 @@
 import sgMail from '@sendgrid/mail';
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
 
 export async function sendVerificationEmail(email: string, token: string) {
-  const verificationUrl = `${process.env.NEXTAUTH_URL}/api/auth/verify-email?token=${token}`;
+  if (!process.env.SENDGRID_FROM_EMAIL) {
+    throw new Error("SENDGRID_FROM_EMAIL environment variable is not set");
+  }
+
+  const verificationUrl = `${process.env.NEXTAUTH_URL!}/api/auth/verify-email?token=${token}`;
 
   const msg = {
     to: email,

@@ -29,7 +29,7 @@ export async function isSelfContained(
   userMessage: UserMessage,
   messages: UserMessage[] = [],
   language: Language = "en",
-  approach: string = "simplistic"
+  approach = "simplistic"
 ): Promise<boolean> {
   const message = userMessage.content;
 

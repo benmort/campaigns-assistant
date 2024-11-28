@@ -1,8 +1,5 @@
 import { motion } from "framer-motion";
-import Link from "next/link";
 import {useTranslations} from 'next-intl';
-
-import { LogoOpenAI, MessageIcon, VercelIcon } from "./icons";
 
 export function SplashOverview(){
   const globals = useTranslations('globals');

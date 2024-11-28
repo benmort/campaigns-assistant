@@ -1,4 +1,4 @@
-import type FewShot from './index'
+import type { FewShot } from './index'
 
 export const documentPrompt = `
   Blocks is a special user interface mode that helps users with writing, editing, and other content creation tasks. 

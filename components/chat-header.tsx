@@ -1,6 +1,4 @@
 'use client';
-
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { useWindowSize } from 'usehooks-ts';
@@ -11,7 +9,7 @@ import { RagToggle } from '@/components/rag-toggle';
 import { SidebarToggle } from '@/components/sidebar-toggle';
 import { Button } from '@/components/ui/button';
 import { BetterTooltip } from '@/components/ui/tooltip';
-import { PlusIcon, VercelIcon } from './icons';
+import { PlusIcon, } from './icons';
 import { useSidebar } from './ui/sidebar';
 
 export function ChatHeader({ selectedModelId }: { selectedModelId: string }) {

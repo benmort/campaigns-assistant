@@ -1,4 +1,4 @@
-import { Message, CreateMessage, ChatRequestOptions } from "ai";
+import type { Message, CreateMessage, ChatRequestOptions } from "ai";
 import { motion } from "framer-motion";
 import { useTranslations } from 'next-intl';
 

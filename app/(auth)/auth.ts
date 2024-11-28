@@ -1,9 +1,7 @@
 import { compare } from 'bcrypt-ts';
 import NextAuth, { type User, type Session } from 'next-auth';
 import Credentials from 'next-auth/providers/credentials';
-
-import { sendVerificationEmail } from '@/lib/sendgrid';
-import { getUserByEmail, generateVerificationToken, updateUserVerificationStatus } from '@/lib/db/queries';
+import { getUserByEmail, } from '@/lib/db/queries';
 
 import { authConfig } from './auth.config';
 
@@ -29,9 +27,9 @@ export const {
         const passwordsMatch = await compare(password, users[0].password!);
         if (!passwordsMatch) return null;
 
-        if (!!process.env.AUTH_VERIFY_EMAILS && !user.emailVerified) {
+        /*if (!!process.env.AUTH_VERIFY_EMAILS && !user.emailVerified) {
           throw new Error('Email not verified. Please check your inbox.');
-        }
+        }*/
 
         return users[0] as any;
       },
@@ -41,7 +39,7 @@ export const {
     async jwt({ token, user }) {
       if (user) {
         token.id = user.id;
-        token.emailVerified = user.emailVerified;
+        //token.emailVerified = user.emailVerified;
       }
 
       return token;
@@ -55,7 +53,7 @@ export const {
     }) {
       if (session.user) {
         session.user.id = token.id as string;
-        session.user.emailVerified = token.emailVerified as boolean;
+        //session.user.emailVerified = token.emailVerified as boolean;
       }
 
       return session;

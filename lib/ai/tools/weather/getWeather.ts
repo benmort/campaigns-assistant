@@ -13,7 +13,9 @@ const getWeather: Tool = {
 
 export default getWeather;
 
-async function execute(parameters, options, executionContext) {
+import type { ExecutionContext } from '@/lib/ai/tools'
+
+async function execute(parameters: Record<string, any>, options: Record<string, any>, executionContext: ExecutionContext) {
   const { latitude, longitude } = parameters
   const { streamingData, model, session, rag } = executionContext
   const response = await fetch(

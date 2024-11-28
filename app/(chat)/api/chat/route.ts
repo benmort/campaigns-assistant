@@ -6,7 +6,6 @@ interface Message {
 import { models } from '@/lib/ai/models';
 import { createTextStream } from '@/lib/ai/stream-text'
 import { auth } from '@/app/(auth)/auth';
-import { customModel } from '@/lib/ai';
 import {
   deleteChatById,
   getChatById,

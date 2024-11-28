@@ -7,7 +7,6 @@ import type {
   Message,
 } from 'ai';
 import cx from 'classnames';
-import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import React, {
   useRef,

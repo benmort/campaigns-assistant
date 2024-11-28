@@ -5,6 +5,10 @@ import { customModel } from '@/lib/ai';
 import { getDocumentById, saveSuggestions } from '@/lib/db/queries';
 import { generateUUID } from '@/lib/utils';
 
+import {
+  type Suggestion
+} from '@/lib/db/schema';
+
 import type { Tool } from '../index'
 
 const requestSuggestions: Tool = {
@@ -19,7 +23,9 @@ const requestSuggestions: Tool = {
 
 export default requestSuggestions;
 
-async function execute(parameters, options, executionContext) {
+import type { ExecutionContext } from '@/lib/ai/tools'
+
+async function execute(parameters: Record<string, any>, options: Record<string, any>, executionContext: ExecutionContext) {
   const { documentId } = parameters
   const { streamingData, model, session, rag } = executionContext
 
@@ -31,7 +37,7 @@ async function execute(parameters, options, executionContext) {
     };
   }
 
-  let suggestions: Array<
+  const suggestions: Array<
     Omit<Suggestion, 'userId' | 'createdAt' | 'documentCreatedAt'>
   > = [];
 
@@ -68,7 +74,7 @@ async function execute(parameters, options, executionContext) {
     suggestions.push(suggestion);
   }
 
-  if (session.user && session.user.id) {
+  if (session.user?.id) {
     const userId = session.user.id;
 
     await saveSuggestions({

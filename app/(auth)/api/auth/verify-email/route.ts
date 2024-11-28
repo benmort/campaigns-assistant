@@ -1,19 +1,30 @@
 import { getUserByVerificationToken, updateUserVerificationStatus } from '@/lib/db/queries';
 
 export async function GET(request: Request) {
-  const { token } = request.query;
+  // Parse query parameters using the URL object
+  const url = new URL(request.url);
+  const token = url.searchParams.get('token'); // Retrieve the 'token' parameter
 
   if (!token) {
-    return res.status(400).json({ error: 'Token is required' });
+    return new Response(JSON.stringify({ error: 'Token is required' }), {
+      status: 400,
+      headers: { 'Content-Type': 'application/json' },
+    });
   }
 
   const user = await getUserByVerificationToken(token);
 
   if (!user) {
-    return res.status(400).json({ error: 'Invalid or expired token' });
+    return new Response(JSON.stringify({ error: 'Invalid or expired token' }), {
+      status: 400,
+      headers: { 'Content-Type': 'application/json' },
+    });
   }
 
   await updateUserVerificationStatus(user.id, true);
 
-  return res.status(200).json({ message: 'Email verified successfully!' });
+  return new Response(JSON.stringify({ message: 'Email verified successfully!' }), {
+    status: 200,
+    headers: { 'Content-Type': 'application/json' },
+  });
 }

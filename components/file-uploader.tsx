@@ -1,4 +1,4 @@
-import React, { useRef, useState, useCallback, ChangeEvent } from 'react';
+import React, { useRef, useState, useCallback, type ChangeEvent } from 'react';
 import { toast } from 'sonner';
 
 import { PlusIcon } from '@/components/icons';

@@ -1,10 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-
-import { MessageIcon, VercelIcon } from './icons';
 
 export const Overview = () => {
   const globals = useTranslations('globals');

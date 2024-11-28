@@ -17,13 +17,15 @@ const createDocument: Tool = {
 
 export default createDocument;
 
-async function execute(parameters, options, executionContext) {
+import type { ExecutionContext } from '@/lib/ai/tools'
+
+async function execute(parameters: Record<string, any>, options: Record<string, any>, executionContext: ExecutionContext) {
   const { title } = parameters
   const { streamingData, model, session, rag } = executionContext
 
   const id = generateUUID();
 
-  let draftText: string = '';
+  let draftText = '';
 
   streamingData.append({
     type: 'id',
@@ -63,7 +65,7 @@ async function execute(parameters, options, executionContext) {
 
   streamingData.append({ type: 'finish', content: '' });
 
-  if (session.user && session.user.id) {
+  if (session.user?.id) {
     await saveDocument({
       id,
       title,

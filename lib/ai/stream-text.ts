@@ -17,14 +17,14 @@ interface Model {
   apiIdentifier: string;
 }
 
+import type { ExecutionContext } from '@/lib/ai/tools'
+
 import {
   convertToCoreMessages,
   StreamData,
-  streamObject,
   streamText
 } from 'ai';
-import { Session } from "next-auth";
-import { z } from 'zod';
+import type { Session } from "next-auth";
 
 import { customModel } from '@/lib/ai';
 import { generateMessageEmbeddings } from "@/lib/ai/embeddings";
@@ -34,12 +34,8 @@ import { summariseContext } from "@/lib/ai/summarisation";
 import { allActiveTools, allTools } from '@/lib/ai/tools'
 
 import {
-  getDocumentById,
-  saveDocument,
   saveMessages,
-  saveSuggestions,
 } from '@/lib/db/queries';
-import { Suggestion } from '@/lib/db/schema';
 import {
   generateUUID,
   sanitizeResponseMessages,
@@ -84,10 +80,11 @@ export async function createTextStream(
       key,
       {
         ...value,
-        execute: async function (...args) {
+        execute: async (...args: unknown[]) => {
           try {
             console.log(`Starting Tool > ${key}`);
-            const updatedArgs = [...args, {streamingData, model, session, rag}]; // Append executionContext to args
+            const executionContext = { streamingData, model, session, rag }
+            const updatedArgs = [...args, executionContext] as [Record<string, any>, Record<string, any>, ExecutionContext]; // Append executionContext to args
             const result = await value.execute(...updatedArgs); // Call the original function
             console.log(`Complete Tool > ${key}`);
             return result

@@ -18,7 +18,7 @@ import {
   message,
   vote,
   systemPrompt,
-  SystemPrompt
+  type SystemPrompt
 } from './schema';
 
 // Optionally, if not using email/pass login, you can
@@ -47,9 +47,9 @@ export async function getUserByVerificationToken(token: string) {
     return db
       .select()
       .from(user)
-      .where(user.emailVerificationToken.equals(token))
+      .where(eq(user.emailVerificationToken, token))
       .limit(1)
-      .then(res => res[0]);
+      .then(res => res[0]);;
   } catch (error) {
     console.error('Failed to get user from database', error);
     throw error;
@@ -75,7 +75,7 @@ export async function generateVerificationToken(userId: string) {
   await db
     .update(user)
     .set({ emailVerificationToken: token })
-    .where(user.id.equals(userId));
+    .where(eq(user.id, userId));
   return token;
 }
 
@@ -83,7 +83,7 @@ export async function updateUserVerificationStatus(userId: string, isVerified: b
   await db
     .update(user)
     .set({ emailVerified: isVerified, emailVerificationToken: null })
-    .where(updateUsersTable.id.equals(userId));
+    .where(eq(user.id, userId));
 }
 
 export async function saveChat({

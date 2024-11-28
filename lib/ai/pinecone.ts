@@ -3,7 +3,7 @@ export interface PineconeRecord {
   metadata: Record<string, any>;
 }
 
-import { Pinecone, type ScoredPineconeRecord } from "@pinecone-database/pinecone";
+import { Pinecone, } from "@pinecone-database/pinecone";
 
 let pinecone: Pinecone | null = null;
 
@@ -121,7 +121,7 @@ export async function getAllDocuments(batchSize = 1000): Promise<PineconeRecord[
       const fetchResponse = await index.fetch(batchIds);
 
       // Collect fetched documents
-      if (fetchResponse && fetchResponse.records) {
+      if (fetchResponse?.records) {
         const records = Object.values(fetchResponse.records);
 
         // Type guard to validate records
