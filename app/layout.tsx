@@ -12,9 +12,36 @@ interface RootLayoutProps {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://chat.vercel.ai"),
+  metadataBase: new URL("https://app.lemmata.ai"),
   title: "Campaigns Assistant",
   description: "AI Chatbot with access to knowledge and tools.",
+  icons: {
+    icon: "/images/icons/favicon.ico", // Path to your favicon
+    apple: "/images/icons/apple-touch-icon.png", // Apple-specific icon
+    shortcut: "/images/icons/apple-touch-icon.png", // Browser-specific shortcut icon
+  },
+  manifest: "/site.webmanifest", // Path to your manifest file
+  openGraph: {
+    title: "Campaigns Assistant",
+    description: "AI Chatbot with access to knowledge and tools.",
+    url: "https://app.lemmata.ai",
+    siteName: "Campaigns Assistant",
+    images: [
+      {
+        url: "/og-image.svg", // Path to Open Graph image
+        width: 800,
+        height: 600,
+        alt: "Campaigns Assistant Open Graph Image",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Campaigns Assistant",
+    description: "AI Chatbot with access to knowledge and tools.",
+    images: ["/og-image.svg"],
+  }
 };
 
 export const viewport = {
