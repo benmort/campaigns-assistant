@@ -25,10 +25,10 @@ export const RagToggle = () => {
   return (
     <Button
       onClick={toggleRag}
-      className="py-1.5 px-2 h-fit font-normal"
+      className="w-full cursor-pointer"
       variant={isRagEnabled ? "default" : "secondary"}
     >
-      {isRagEnabled ? "RAG Enabled" : "RAG Disabled"}
+      Use Resources
       {isRagEnabled && <CheckCirclFillIcon />}
     </Button>
   );

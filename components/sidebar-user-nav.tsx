@@ -19,6 +19,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from '@/components/ui/sidebar';
+import { RagToggle } from '@/components/rag-toggle';
 
 export function SidebarUserNav({ user }: { user: User }) {
   const { setTheme, theme } = useTheme();
@@ -45,19 +46,22 @@ export function SidebarUserNav({ user }: { user: User }) {
             side="top"
             className="w-[--radix-popper-anchor-width]"
           >
-            {/*
+            <DropdownMenuItem asChild>
+              <RagToggle />
+            </DropdownMenuItem>
+            <DropdownMenuSeparator />
+            {
               <DropdownMenuItem
                 className="cursor-pointer"
-                onSelect={() => setTheme(theme === 'dark' ? content('light') : content('dark'))}
+                onSelect={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
               >
                 {`${content('toggle')} ${theme === 'light' ? content('dark') : content('light')} ${content('mode')}`}
               </DropdownMenuItem>
               
-            */}
+            }
             <DropdownMenuItem asChild>
               <Link href="/admin">Admin</Link>
             </DropdownMenuItem>
-            <DropdownMenuSeparator />
             <DropdownMenuItem asChild>
               <button
                 type="button"

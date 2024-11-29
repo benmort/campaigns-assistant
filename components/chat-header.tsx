@@ -5,7 +5,6 @@ import { useWindowSize } from 'usehooks-ts';
 
 import { LocaleSelector } from '@/components/locale-selector';
 import { ModelSelector } from '@/components/model-selector';
-import { RagToggle } from '@/components/rag-toggle';
 import { SidebarToggle } from '@/components/sidebar-toggle';
 import { Button } from '@/components/ui/button';
 import { BetterTooltip } from '@/components/ui/tooltip';
@@ -37,12 +36,11 @@ export function ChatHeader({ selectedModelId }: { selectedModelId: string }) {
           </Button>
         </BetterTooltip>
       )}
-      <ModelSelector
+      {/*<ModelSelector
         selectedModelId={selectedModelId}
         className="order-1 md:order-2"
-      />
+      />*/}
       <LocaleSelector />
-      <RagToggle />
     </header>
   );
 }
