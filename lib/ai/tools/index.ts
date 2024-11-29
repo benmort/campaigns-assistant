@@ -1,4 +1,5 @@
 import { documentTools } from './document'
+import { emailTools } from './email'
 import { weatherTools } from './weather'
 
 export interface ExecutionContext {
@@ -22,17 +23,24 @@ type AllowedTools =
   | 'createDocument'
   | 'updateDocument'
   | 'requestSuggestions'
+  | 'createEmail'
+  | 'updateEmail'
+  | 'requestEmailSuggestions'
   | 'getWeather';
 
 const allActiveTools: AllowedTools[] = [
   'createDocument',
   'updateDocument',
-  'requestSuggestions',
+  'requestDocumentSuggestions',
+  'createEmail',
+  'updateEmail',
+  'requestEmailSuggestions',
   'getWeather'
 ];
 
 const allTools = Object.assign(
   documentTools,
+  emailTools,
   weatherTools
 )
 
