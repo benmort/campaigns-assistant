@@ -22,7 +22,7 @@ export interface Tool {
 type AllowedTools =
   | 'createDocument'
   | 'updateDocument'
-  | 'requestSuggestions'
+  | 'requestDocumentSuggestions'
   | 'createEmail'
   | 'updateEmail'
   | 'requestEmailSuggestions'
