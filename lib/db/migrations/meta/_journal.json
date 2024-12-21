@@ -22,6 +22,20 @@
       "when": 1730725226313,
       "tag": "0002_wandering_riptide",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1731561405927,
+      "tag": "0003_wild_rattler",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1731997002369,
+      "tag": "0004_mute_xavin",
+      "breakpoints": true
     }
   ]
 }

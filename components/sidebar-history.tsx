@@ -4,6 +4,7 @@ import { isToday, isYesterday, subMonths, subWeeks } from 'date-fns';
 import Link from 'next/link';
 import { useParams, usePathname, useRouter } from 'next/navigation';
 import type { User } from 'next-auth';
+import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 import { toast } from 'sonner';
 import useSWR from 'swr';
@@ -55,35 +56,38 @@ const ChatItem = ({
   isActive: boolean;
   onDelete: (chatId: string) => void;
   setOpenMobile: (open: boolean) => void;
-}) => (
-  <SidebarMenuItem>
-    <SidebarMenuButton asChild isActive={isActive}>
-      <Link href={`/chat/${chat.id}`} onClick={() => setOpenMobile(false)}>
-        <span>{chat.title}</span>
-      </Link>
-    </SidebarMenuButton>
-    <DropdownMenu modal={true}>
-      <DropdownMenuTrigger asChild>
-        <SidebarMenuAction
-          className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground mr-0.5"
-          showOnHover={!isActive}
-        >
-          <MoreHorizontalIcon />
-          <span className="sr-only">More</span>
-        </SidebarMenuAction>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent side="bottom" align="end">
-        <DropdownMenuItem
-          className="cursor-pointer text-destructive focus:bg-destructive/15 focus:text-destructive dark:text-red-500"
-          onSelect={() => onDelete(chat.id)}
-        >
-          <TrashIcon />
-          <span>Delete</span>
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
-  </SidebarMenuItem>
-);
+}) => {
+  const content = useTranslations('content')
+  return (
+    <SidebarMenuItem>
+      <SidebarMenuButton asChild isActive={isActive}>
+        <Link href={`/chat/${chat.id}`} onClick={() => setOpenMobile(false)}>
+          <span>{chat.title}</span>
+        </Link>
+      </SidebarMenuButton>
+      <DropdownMenu modal={true}>
+        <DropdownMenuTrigger asChild>
+          <SidebarMenuAction
+            className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground mr-0.5"
+            showOnHover={!isActive}
+          >
+            <MoreHorizontalIcon />
+            <span className="sr-only">More</span>
+          </SidebarMenuAction>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent side="bottom" align="end">
+          <DropdownMenuItem
+            className="cursor-pointer text-destructive focus:bg-destructive/15 focus:text-destructive dark:text-red-500"
+            onSelect={() => onDelete(chat.id)}
+          >
+            <TrashIcon />
+            <span>{ content('delete') }</span>
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+    </SidebarMenuItem>
+  );
+}
 
 export function SidebarHistory({ user }: { user: User | undefined }) {
   const { setOpenMobile } = useSidebar();
@@ -104,22 +108,23 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
   const [deleteId, setDeleteId] = useState<string | null>(null);
   const [showDeleteDialog, setShowDeleteDialog] = useState(false);
   const router = useRouter();
+  const content = useTranslations('content')
   const handleDelete = async () => {
     const deletePromise = fetch(`/api/chat?id=${deleteId}`, {
       method: 'DELETE',
     });
 
     toast.promise(deletePromise, {
-      loading: 'Deleting chat...',
+      loading: content('deleting_chat'),
       success: () => {
         mutate((history) => {
           if (history) {
             return history.filter((h) => h.id !== id);
           }
         });
-        return 'Chat deleted successfully';
+        return content('deleted_chat_successfully');
       },
-      error: 'Failed to delete chat',
+      error: content('failed_chat_deletion'),
     });
 
     setShowDeleteDialog(false);
@@ -134,7 +139,7 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
       <SidebarGroup>
         <SidebarGroupContent>
           <div className="text-zinc-500 w-full flex flex-row justify-center items-center text-sm gap-2">
-            <div>Login to save and revisit previous chats!</div>
+            <div>{ content('login_to_save_chats') }</div>
           </div>
         </SidebarGroupContent>
       </SidebarGroup>
@@ -145,7 +150,7 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
     return (
       <SidebarGroup>
         <div className="px-2 py-1 text-xs text-sidebar-foreground/50">
-          Today
+          { content('today') }
         </div>
         <SidebarGroupContent>
           <div className="flex flex-col">
@@ -176,7 +181,7 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
         <SidebarGroupContent>
           <div className="text-zinc-500 w-full flex flex-row justify-center items-center text-sm gap-2">
             <div>
-              Your conversations will appear here once you start chatting!
+              { content('conversation_will_appear') }
             </div>
           </div>
         </SidebarGroupContent>
@@ -231,7 +236,7 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
                     {groupedChats.today.length > 0 && (
                       <>
                         <div className="px-2 py-1 text-xs text-sidebar-foreground/50">
-                          Today
+                          { content('today') }
                         </div>
                         {groupedChats.today.map((chat) => (
                           <ChatItem
@@ -251,7 +256,7 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
                     {groupedChats.yesterday.length > 0 && (
                       <>
                         <div className="px-2 py-1 text-xs text-sidebar-foreground/50 mt-6">
-                          Yesterday
+                          { content('yesterday') }
                         </div>
                         {groupedChats.yesterday.map((chat) => (
                           <ChatItem
@@ -271,7 +276,7 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
                     {groupedChats.lastWeek.length > 0 && (
                       <>
                         <div className="px-2 py-1 text-xs text-sidebar-foreground/50 mt-6">
-                          Last 7 days
+                          { content('last_7_days') } 
                         </div>
                         {groupedChats.lastWeek.map((chat) => (
                           <ChatItem
@@ -291,7 +296,7 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
                     {groupedChats.lastMonth.length > 0 && (
                       <>
                         <div className="px-2 py-1 text-xs text-sidebar-foreground/50 mt-6">
-                          Last 30 days
+                          { content('last_30_days') } 
                         </div>
                         {groupedChats.lastMonth.map((chat) => (
                           <ChatItem
@@ -311,7 +316,7 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
                     {groupedChats.older.length > 0 && (
                       <>
                         <div className="px-2 py-1 text-xs text-sidebar-foreground/50 mt-6">
-                          Older
+                          { content('older') } 
                         </div>
                         {groupedChats.older.map((chat) => (
                           <ChatItem
@@ -336,16 +341,15 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
       <AlertDialog open={showDeleteDialog} onOpenChange={setShowDeleteDialog}>
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+            <AlertDialogTitle>{ content('sure') }</AlertDialogTitle>
             <AlertDialogDescription>
-              This action cannot be undone. This will permanently delete your
-              chat and remove it from our servers.
+              { content('cannot_undo') }
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>
             <AlertDialogAction onClick={handleDelete}>
-              Continue
+              { content('continue') }
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
